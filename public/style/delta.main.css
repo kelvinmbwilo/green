@@ -1,0 +1,203 @@
+/**
+ * Unicorn Admin Template
+ * Diablo9983 -> diablo9983@gmail.com
+**/
+* {
+	outline:none !important;
+	-moz-outline: none !important;
+}
+/* Main */
+body {
+	overflow-x: hidden;
+}
+
+/* Header */
+#header {height: 77px;position: relative;width: 100%;z-index: -9;}
+#header h1 {background: url("../images/logo.png") no-repeat scroll 0 0 transparent;height: 31px;left: 15px;line-height: 600px;overflow: hidden;position: relative;top: 24px;width: 191px;}
+#header h1 a {display: block;}
+
+/* Search input */
+#search {position: absolute;z-index: 25;top: 6px;left: 230px;}
+#search input[type=text] {font-size: 12px;line-height: 18px;border-radius: 4px 0 0 4px;padding: 5px 10px 4px;border: 0;box-shadow: 2px 2px 3px rgba(0,0,0,0.7) inset, 0 1px 0 rgba(255,255,255,0.2); width: 100px;}
+#search button {border: 0;margin-top: -10px;padding: 5px 10px 4px;border-radius: 0 4px 4px 0;box-shadow: -2px 2px 3px rgba(0,0,0,0.7) inset, 0 1px 0 rgba(255,255,255,0.2); }
+#search button i {opacity: 0.5;}
+#search button:hover i, #search button:active i {opacity: 0.9;}
+
+
+/* Top user navigation */
+#user-nav {position: absolute;right: 30px;top: 5px;z-index: 20;margin: 0;}
+#user-nav > ul {margin: 0;padding: 0;list-style: none;}
+#user-nav > ul > li {float: left;list-style-type: none;margin: 0;position: relative;padding: 0;}
+#user-nav > ul > li > a {padding: 5px 10px;display: block;font-size: 10px;}
+#user-nav > ul > li > a:hover, #user-nav > ul > li.open > a {color: #ffffff;}
+#user-nav > ul > li > a > i, #sidebar li a i {vertical-align: top;opacity: .5;margin-top: 2px;}
+#user-nav > ul > li > a:hover > i, #user-nav > ul > li.open > a > i {	opacity: 1;}
+#user-nav > ul > li > a > .label {vertical-align: middle;padding: 1px 4px 1px;margin: -2px 4px 0;display: inline-block;}
+#user-nav > ul ul > li > a {text-align: left;text-shadow: 0 1px 0 #ffffff;}
+#user-nav > ul ul > li > a:hover {text-shadow: 0 1px 0 rgba(0,0,0,0.5);}
+
+
+/* Sidebar Navigation */
+#sidebar {display: block;float: left;z-index: 16; width: 100%}
+#sidebar > ul {list-style: none;margin: 10px 0 0;padding: 0;}
+#sidebar > ul > li {display: block;	position: relative;}
+#sidebar > ul > li.active {box-shadow: 0 2px 4px rgba(0,0,0,0.2) inset;}
+#sidebar > ul > li > a {padding: 10px 0 10px 15px;display: block;color: #AAAAAA;}
+#sidebar > ul > li > a > i {margin-right: 10px;}
+#sidebar > ul > li > a > .label {margin: 0 20px 0 0;float: right;padding: 3px 5px 2px;box-shadow: 0 1px 2px rgba(0,0,0,0.5) inset, 0 1px 0 rgba(255,255,255,0.2);}
+#sidebar > ul ul {display: none;margin: 0;padding: 0;box-shadow: 0 0 3px rgba(0,0,0,0.5) inset;}
+#sidebar > ul li.open ul {display: block;}
+#sidebar > ul ul li a{padding: 10px 0 10px 25px;display: block;color: #777777;}
+#sidebar > ul ul li:first-child a {border-top: 0;}
+#sidebar > ul ul li:last-child a {border-bottom: 0;}
+
+
+
+
+/* Tables */
+
+span.icon .checker {
+	margin-top: -5px;
+	margin-right: 0;
+}
+
+.dataTable .ui-state-default {
+    box-shadow: 0;
+    border-right: 0;
+    border-left: 0;
+}
+.dataTables_length {
+    color: #878787;
+    margin: 7px 5px 0;
+    position: absolute;
+    right: 2px;
+    top: -2px;
+}
+.dataTables_length div {
+	vertical-align: middle;
+}
+
+.dataTables_paginate {
+    line-height: 16px;
+    text-align: right;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.dataTables_paginate .ui-button,  .pagination.alternate li a {
+    font-size: 12px;
+    padding: 4px 10px !important;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #dddddd #dddddd #cccccc; /* for IE < 9 */
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    display: inline-block;
+    line-height: 16px;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    color: #333333;
+    text-shadow: 0 1px 0 #ffffff;
+    margin-right: 0;
+}
+.dataTables_paginate .ui-button:hover, .pagination.alternate li a:hover{
+    background-color: #e8e8e8;
+    background-image: -moz-linear-gradient(center top , #f0f0f0, #dadada);
+    background-image: -ms-linear-gradient(top, #f0f0f0, #dadada);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f0f0f0), to(#dadada));
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #dadada);
+    background-image: -o-linear-gradient(top, #f0f0f0, #dadada);
+    background-image: linear-gradient(top, #f0f0f0, #dadada);
+    color: #222222;
+    text-shadow: 0 1px 0 #ffffff;
+    cursor: pointer;
+}
+
+.dataTables_paginate .first{
+    border-radius: 4px 0 0 4px;    
+}
+.dataTables_paginate .last {
+    border-radius: 0 4px 4px 0;    
+}
+.dataTables_paginate .ui-state-disabled, .fc-state-disabled, .pagination.alternate li.disabled a {
+    color: #AAAAAA !important;
+}
+.dataTables_paginate .ui-state-disabled:hover, .fc-state-disabled:hover, .pagination.alternate li.disabled a:hover {
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    cursor: default !important;
+}
+.dataTables_paginate span .ui-state-disabled, .pagination.alternate li.active a {
+    background-color: #414141 !important;
+    background-image: -moz-linear-gradient(center top , #555555, #222222) !important;
+    background-image: -ms-linear-gradient(top, #555555, #222222) !important;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#555555), to(#222222)) !important;
+    background-image: -webkit-linear-gradient(top, #555555, #222222) !important;
+    background-image: -o-linear-gradient(top, #555555, #222222) !important;
+    background-image: linear-gradient(top, #555555, #222222) !important;
+    color: #ffffff !important;
+    cursor: default !important;
+    opacity: 1;
+}
+div.dataTables_wrapper .ui-widget-header {
+    border-right: medium none;
+    border-top: 1px solid #D5D5D5;
+    font-weight: normal;
+    margin-top: -1px;
+}
+.dataTables_wrapper .ui-toolbar {
+    padding: 5px;
+    margin: 0;
+    border-bottom: 0 !important;
+}
+.dataTables_filter {
+    color: #878787;
+    font-size: 11px;
+    left: 0;
+    margin: 4px 8px 2px 10px;
+    position: absolute;
+    text-align: left;
+}
+.dataTables_filter input {
+	margin-bottom: 0;
+}
+.DataTables_sort_icon {
+    margin-top: 1px;
+}
+
+.table th {
+	height: auto;
+	font-size: 10px;
+	padding: 5px 10px 2px;
+	border-bottom: 0;
+	text-align: center;
+	color: #666666;
+}
+.table.with-check tr th:first-child, .table.with-check tr td:first-child {
+	width: 10px;
+}
+.table.with-check tr th:first-child i{
+	margin-top: -2px;
+	opacity: 0.6;
+}
+.table.with-check tr td:first-child .checker {
+	margin-right: 0;
+}
+.table tr.checked td {
+	background-color: #FFFFE3 !important;
+}
+.table-striped tbody > tr:nth-child(2n+1) > td, .table-striped tbody > tr:nth-child(2n+1) > th {
+    background-color: #FCFCFC;
+}
+.table-hover tbody > tr:hover > td {
+    background-color: #f5f5f5;
+}
+
