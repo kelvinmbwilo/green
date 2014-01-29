@@ -10,8 +10,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 *
 	 * @var string
 	 */
-	protected $table = 'users';
-
+	protected $table = 'user';
+                protected  $guarded = array('id');
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
@@ -48,5 +48,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	{
 		return $this->email;
 	}
+        
+               public function log(){
+                     return $this->hasMany('Logs', 'user_id', 'id');
+                }
+                
 
 }
