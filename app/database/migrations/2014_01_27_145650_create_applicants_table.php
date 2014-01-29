@@ -23,6 +23,7 @@ class CreateApplicantsTable extends Migration {
                                                 $table->string('phone');
                                                 $table->string('postal_address');
                                                 $table->string('marital_status');
+                                                $table->string('residense');
                                                 $table->integer('family_size');
                                                 $table->integer('user_id');
 			$table->timestamps();

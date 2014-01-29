@@ -27,4 +27,9 @@ class Applicants extends Eloquent {
                     return $this->hasOne('GrantedLoans', 'applicant_id', 'id');
                 }
                 
+                public function business(){
+                    return $this->hasMany('Busssiness', 'apllicant_id', 'id');
+                }
+
+
 }
