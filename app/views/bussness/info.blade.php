@@ -1,4 +1,6 @@
-<span class='help-block'>All figures are in Tanzania Shillings(Tsh)<a href="{{ url("applicant/bussness/{id}") }}" class="btn btn-xs btn-primary pull-right"><i class="fa fa-list"></i> Full Details</a></span>
+<span class='help-block'>All figures are in Tanzania Shillings(Tsh)
+    
+</span>
                   <table class='table table-responsive'>
                     <tr>
                         <td>

@@ -19,7 +19,7 @@ class ApplicantController extends \BaseController {
 	 * @return Response
 	 */
 	public function create()
-	{
+	{$app = Applicants::all();
                     return View::make('applicant.add');
 	}
 
@@ -71,7 +71,8 @@ class ApplicantController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$app = Applicants::find($id);
+                                return View::make("applicant.edit",  compact("app"));
 	}
 
 	/**
@@ -82,7 +83,25 @@ class ApplicantController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+                       $app = Applicants::find($id);
+                       $app->firstname = Input::get("firstname");
+                       $app->middlename = Input::get("middlename");
+                       $app->gender = Input::get("gender");
+                       $app->bitrhdate = Input::get("birthdate");
+                       $app->phone = Input::get("phone");
+                       $app->postal_address = Input::get("postal");
+                       $app->marital_status = Input::get("marital");
+                       $app->family_size = Input::get("family");
+                       $app->lastname = Input::get("lastname");
+                       $app->residense = Input::get("residense");
+                       $app->save();
+                       $name = $app->firstname." ".$app->middlename." ".$app->lastname;
+                    Logs::create(array(
+                                "user_id"=>  Auth::user()->id,
+                                "action"  =>"Update loan applicant named ".$name
+                            ));
+                        return View::make("applicant.edit",  compact("app"))->with("msg", " Applicant Information Updated  Successful");;
+                      
 	}
 
 	/**

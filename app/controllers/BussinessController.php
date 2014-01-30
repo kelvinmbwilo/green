@@ -30,7 +30,7 @@ class BussinessController extends \BaseController {
 	 */
 	public function store()
 	{
-                    $app = Busssiness::create(array(
+                    $bus = Busssiness::create(array(
                         "apllicant_id"=>Input::get("id"),
                         "start_year"=>Input::get("startyear"),
                         "discr"=>Input::get("discription"),
@@ -42,7 +42,13 @@ class BussinessController extends \BaseController {
                         "non_business_expense"=>Input::get("nonbexpe"),
                         "user_id"=>Auth::user()->id
                     ));
-                    return $app;
+                    $app = Applicants::find(Input::get("id"));
+                    $name = $app->firstname." ".$app->middlename." ".$app->lastname;
+                    Logs::create(array(
+                                "user_id"=>  Auth::user()->id,
+                                "action"  =>"Add Business for Applicant named ".$name
+                            ));
+                            return View::make("application.add",compact("app","bus"))->with("msg","Bussness Added Successful");
 	}
 
 	/**
@@ -53,7 +59,9 @@ class BussinessController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+                          $bus = Busssiness::find("$id");
+                           $app = Applicants::find($bus->apllicant_id);
+                           return View::make("bussness.show",  compact("bus","app"));
 	}
 
 	/**
@@ -64,7 +72,10 @@ class BussinessController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+                    $bus = Busssiness::find("$id");
+//                    $app = $bus->applicant();
+                    $app = Applicants::find($bus->apllicant_id);
+                    return View::make("bussness.edit",  compact("bus","app"));
 	}
 
 	/**
@@ -75,7 +86,24 @@ class BussinessController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+                        $bus = Busssiness::find($id);
+                        $bus->start_year=Input::get("startyear");
+                        $bus->discr=Input::get("discription");
+                        $bus->busness_location=Input::get("locaton");
+                        $bus->initial_captal=Input::get("start");
+                        $bus->current_captal=Input::get("current");
+                        $bus->daily_turnover=Input::get("daily");
+                        $bus->monthly_turnover=Input::get("mountly");
+                        $bus->business_expense=Input::get("bexpense");
+                        $bus->non_business_expense=Input::get("nonbexpe");
+                        $bus->save();
+                        $app = Applicants::find(Input::get("id"));
+                        $name = $app->firstname." ".$app->middlename." ".$app->lastname;
+                        Logs::create(array(
+                                "user_id"=>  Auth::user()->id,
+                                "action"  =>"Update bussnes tittled ".$bus->discr." for  applicant named ".$name
+                            ));
+                         return View::make("bussness.edit",compact("app","bus"))->with("msg","Bussness Updated Successful");
 	}
 
 	/**

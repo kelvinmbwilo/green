@@ -42,8 +42,9 @@
                        <td>{{ $us->phone }}</td>
                        <td>{{ $us->residense }}</td>
                        <td id="{{ $us->id }}}">
-                           <a href="{{ url("applicant/{$us->id}")}}" title="View Applicants Information" class="edituser"><i class="fa fa-list text-success"></i> info</a>&nbsp;&nbsp;&nbsp;
-                            <a href="{{ url("user/edit/{$us->id}")}}" title="edit Staff" class="edituser"><i class="fa fa-pencil text-info"></i> edit</a>&nbsp;&nbsp;&nbsp;
+                            <a href="{{ url("applicant/{$us->id}")}}" title="View Applicants Information" class="edituser"><i class="fa fa-list text-success"></i> info</a>&nbsp;&nbsp;&nbsp;
+                            <a href="{{ url("applicant/{$us->id}/add/application")}}" title="Add Loan Application" class="loanapp"><i class="fa fa-briefcase text-warning"></i> application</a>&nbsp;&nbsp;&nbsp;
+                            <a href="{{ url("applicant/edit/{$us->id}")}}" title="edit Staff" class="edituser"><i class="fa fa-pencil text-info"></i> edit</a>&nbsp;&nbsp;&nbsp;
                             <a href="#b" title="delete Applicant" class="deleteapp"><i class="fa fa-trash-o text-danger"></i> delete</a>
                        </td>
                   </tr>

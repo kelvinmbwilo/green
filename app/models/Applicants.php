@@ -30,6 +30,10 @@ class Applicants extends Eloquent {
                 public function business(){
                     return $this->hasMany('Busssiness', 'apllicant_id', 'id');
                 }
+                
+                public function application(){
+                    return $this->hasMany('Applications', 'applicant_id', 'id');
+                }
 
 
 }
