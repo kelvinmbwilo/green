@@ -9,7 +9,7 @@
     <div class="panel panel-default">
       <div class="panel-body">
           <h2 class="text-center">Registered Loan Applicants </h2>
-          <ul class="nav nav-pills">
+          <ul class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">All</a></li>
             <li><a href="#profile" data-toggle="tab">With Pending Applications</a></li>
             <li><a href="#messages" data-toggle="tab">With Loans</a></li>
@@ -52,9 +52,52 @@
               </tbody>
           </table>
             </div>
-            <div class="tab-pane" id="profile">With Pending Applications.</div>
-            <div class="tab-pane" id="messages">With Loans</div>
-            <div class="tab-pane" id="settings">
+              
+              <!--
+              Applicants with pending application
+              -->
+            <div class="tab-pane fade" id="profile">
+              <table class='table table-striped table-responsive stafftale' id='stafftale' >
+              <thead>
+                  <tr>
+                      <th> # </th>
+                      <th> Name </th>
+                      <th> gender </th>
+                      <th> Age </th>
+                      <th> Phone </th>
+                      <th> Residense</th>
+                      <th> Action </th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <?php $i = 1; 
+   $appp =  Applicants::whereIn("id",Applications::where("status","pending")->get()->lists("applicant_id"))->get();
+                  ?>
+                  @foreach($appp as $us)
+                  <tr>
+                      <td>{{ $i++ }}</td>
+                       <td style="text-transform: capitalize">{{ $us->firstname }} {{ $us->middlename }} {{ $us->lastname }}</td>
+                       <td>{{ $us->gender }}</td>
+                       <td>{{ date("Y") - date("Y",strtotime($us->bitrhdate))  }}</td>
+                       <td>{{ $us->phone }}</td>
+                       <td>{{ $us->residense }}</td>
+                       <td id="{{ $us->id }}}">
+                            <a href="{{ url("applicant/{$us->id}")}}" title="View Applicants Information" class="edituser"><i class="fa fa-list text-success"></i> info</a>&nbsp;&nbsp;&nbsp;
+                            <a href="{{ url("applicant/{$us->id}/add/application")}}" title="Add Loan Application" class="loanapp"><i class="fa fa-briefcase text-warning"></i> application</a>&nbsp;&nbsp;&nbsp;
+                            <a href="{{ url("applicant/edit/{$us->id}")}}" title="edit Staff" class="edituser"><i class="fa fa-pencil text-info"></i> edit</a>&nbsp;&nbsp;&nbsp;
+                            <a href="#b" title="delete Applicant" class="deleteapp"><i class="fa fa-trash-o text-danger"></i> delete</a>
+                       </td>
+                  </tr>
+                  @endforeach
+              </tbody>
+          </table>
+            </div>
+              
+              <!--
+              Applicants with pending application
+              -->
+            <div class="tab-pane fade" id="messages">With Loans</div>
+            <div class="tab-pane fade" id="settings">
           <table class='table table-striped table-responsive stafftale' id='stafftale' >
               <thead>
                   <tr>

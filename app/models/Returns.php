@@ -10,11 +10,7 @@ class Returns extends Eloquent {
 	protected $table = 'returns';
                 
                 protected  $guarded = array('id');
- 
-                public function post(){
-                    return $this->hasMany('Post', 'subcategory', 'id');
-                }
-                
+
                 public function applicants(){
                     return $this->belongsTo('Applicants', 'applicant_id', 'id');
                 }

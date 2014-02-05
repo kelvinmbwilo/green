@@ -43,7 +43,7 @@ and open the template in the editor.
                 </div>
             </div>
         
-        
+        {{ HTML::script("js/jquery.form.js") }}
         {{ HTML::script("jqueryui/js/jquery-ui-1.10.3.custom.js") }}
         {{ HTML::script("bootstrap/js/bootstrap.js") }}
         {{ HTML::script("DataTables/media/js/jquery.dataTables.js") }}

@@ -11,13 +11,7 @@ class Rules extends Eloquent {
                 
                 protected  $guarded = array('id');
  
-                public function post(){
-                    return $this->hasMany('Post', 'subcategory', 'id');
-                }
-                
-                public function maincategory(){
-                    return $this->belongsTo('Category', 'category', 'id');
-                }
+
                 
 
 }

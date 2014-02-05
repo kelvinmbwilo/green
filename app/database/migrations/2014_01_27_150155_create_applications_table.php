@@ -21,6 +21,7 @@ class CreateApplicationsTable extends Migration {
                                                 $table->integer('amount_granted');
                                                 $table->string('status');
                                                 $table->text('comments');
+                                                $table->text('collateral');
                                                 $table->integer('user_id');
 			$table->timestamps();
 		});

@@ -1,5 +1,5 @@
 <div id="sidebar"> 
-    <h2 id="logo" ><a href="index.php">{{ HTML::image('img/logo.jpg','',array('class'=>'img-responsive img-rounded', 'style'=>'height:120px;width:90%')) }}</a></h2>  
+    <h2 id="logo" ><a href="index.php">{{ HTML::image('img/logo.jpg','',array('class'=>'img-responsive img-rounded', 'style'=>'height:160px;width:90%')) }}</a></h2>  
     <ul>
             <li class="active"><a href="{{url('home')}}"><i class="fa fa-home fa-2x"></i> <span>Dashboard</span></a></li>
             <li class="submenu">
@@ -41,10 +41,9 @@
             <li class="submenu">
                     <a href="#"><i class="fa fa-cog fa-2x"></i> <span>Settings</span> <i class="fa fa-chevron-down pull-right"></i></a>
                     <ul>
-                            <li><a href="#"><i class='fa fa-plus'></i> Add Loan <i class="fa fa-chevron-right pull-right"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> Manage Loans <i class="fa fa-chevron-right pull-right"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> Add Bussiness type <i class="fa fa-chevron-right pull-right"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> Manage Bussiness <i class="fa fa-chevron-right pull-right"></i></a></li>
+                            <li><a href="{{ url("loans") }}"><i class='fa fa-plus'></i> Loans <i class="fa fa-chevron-right pull-right"></i></a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> Bussiness <i class="fa fa-chevron-right pull-right"></i></a></li>
+                            <li><a href="{{ url("rules") }}"><i class="fa fa-cog"></i> Rules <i class="fa fa-chevron-right pull-right"></i></a></li>
                     </ul>
             </li>
 			

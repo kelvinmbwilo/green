@@ -15,9 +15,12 @@ class CreateLoansTable extends Migration {
 		Schema::create('loans', function(Blueprint $table)
 		{
 			$table->increments('id');
-                                                $table->string('name');
-                                                $table->integer('minimum_amount');
-                                                $table->integer('maximum_amount');
+            $table->string('name');
+            $table->integer('minimum_amount');
+            $table->integer('maximum_amount');
+            $table->integer('minReturnTime');
+            $table->integer('MaxReturnTime');
+            $table->text("other");
 			$table->timestamps();
 		});
 	}

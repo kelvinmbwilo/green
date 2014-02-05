@@ -1,7 +1,7 @@
 <span class='help-block'>All figures are in Tanzania Shillings(Tsh)
     
 </span>
-                  <table class='table table-responsive'>
+                  <table class='table table-responsive table-condensed'>
                     <tr>
                         <td>
                             Location<br>

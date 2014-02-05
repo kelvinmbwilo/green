@@ -107,15 +107,82 @@ Route::get('applicant/edit/bussness/{id}',array('as'=>'editapplicantbuss', 'uses
 Route::post('applicant/edit/bussness/{id}',array('as'=>'editapplicantbuss1', 'uses'=>'BussinessController@update'));
 
 //view one aplicant bussiness
-Route::get('applicant/bussness/{id}',array('as'=>'addapplicantbuss1', 'uses'=>'BussinessController@show'));
+Route::get('applicant/bussness/{id}',array('as'=>'viewapplicantbuss1', 'uses'=>'BussinessController@show'));
 
 
 /*
  * Dealing with applicant loan Applications
  * @ApplicationController
  */
+//display aplicant loan application information
+Route::get('applicant/application/{id}',array('as'=>'viewapplication', 'uses'=>'ApplicationController@show'));
+
 //display a form to register new aplicant loan application
 Route::get('applicant/{id}/add/application',array('as'=>'addapplicaion', 'uses'=>'ApplicationController@create'));
 
 // register new aplicant loan application
 Route::post('applicant/add/application',array('as'=>'addapplicaion1', 'uses'=>'ApplicationController@store'));
+
+// register new aplicant loan application
+Route::get('applicant/edit/application/{id}',array('as'=>'editapplicaion1', 'uses'=>'ApplicationController@edit'));
+
+//register new aplicant loan application
+Route::post('applicant/edit/application/{id}',array('as'=>'editapplicaion1', 'uses'=>'ApplicationController@update'));
+
+
+//displaying a form to update aplicant sponsor information
+Route::get('applicant/edit/application/sponsor/{id}',array('uses'=>'ApplicationController@updatesponsor'));
+
+//updating aplicant sponsor information
+Route::post('applicant/edit/application/sponsor/{id}',array('uses'=>'ApplicationController@changesponsor'));
+
+//displaying a form to add aplicant sponsor information
+Route::get('applicant/add/application/sponsor/{id}',array( 'uses'=>'ApplicationController@addsponsor'));
+
+//adding aplicant sponsor information
+Route::post('applicant/add/application/sponsor/{id}',array('uses'=>'ApplicationController@storesponsor'));
+
+
+/**
+ * Managing Loans
+ * Directing to Loans Controller
+ */
+//displaying index page for loans
+Route::get("loans",array("uses"=>"LoanController@index"));
+
+//loading a list of loans
+Route::get("loans/list",array("uses"=>"LoanController@lists"));
+
+//displaying a form to edit a loan
+Route::get("loans/edit/{id}",array("uses"=>"LoanController@edit"));
+
+//updating loan information
+Route::post("loans/edit/{id}",array("uses"=>"LoanController@update"));
+
+//deleting a loan
+Route::post("loans/delete/{id}",array("uses"=>"LoanController@destroy"));
+
+//displaying a form to add a loan
+Route::post("loans/add",array("uses"=>"LoanController@store"));
+
+/**
+ * Managing Rules
+ * Using RulesController
+ */
+//displaying index page for rules
+Route::get("rules",array("uses"=>"RulesController@index"));
+
+//loading a list of rules
+Route::get("rules/list",array("uses"=>"RulesController@lists"));
+
+//displaying a form to edit a rules
+Route::get("rules/edit/{id}",array("uses"=>"RulesController@edit"));
+
+//displaying a form to edit a rules
+Route::post("rules/edit/{id}",array("uses"=>"RulesController@update"));
+
+//deleting a rules
+Route::post("rules/delete/{id}",array("uses"=>"RulesController@destroy"));
+
+//displaying a form to add a rules
+Route::post("rules/add",array("uses"=>"RulesController@store"));

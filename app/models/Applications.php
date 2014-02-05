@@ -15,6 +15,10 @@ class Applications extends Eloquent {
                     return $this->hasMany('Returns', 'application_id', 'id');
                 }
                 
+                public function sponsor(){
+                    return $this->hasMany('Sponsor', 'application_id', 'id');
+                }
+                
                  public function granted(){
                     return $this->hasOne('GrantedLoans', 'application_id', 'id');
                 }

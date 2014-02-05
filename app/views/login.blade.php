@@ -17,10 +17,10 @@ and open the template in the editor.
         {{ HTML::style("style/delta.main.css") }}
         {{ HTML::script("js/jquery-1.9.1.js") }}
     </head>
-    <body style="background-image: url(img/black_paper.png)">
+    <body style="background-image: url(pattern/pattern16.png)">
         
             <div class="container" style="padding-top: 160px">
-                <div class="panel panel-default col-sm-offset-3" style="width: 50%">
+                <div class="panel panel-success col-sm-offset-3" style="width: 50%;">
                     <div class="panel-heading">
                         <h3 class="panel-title text-muted"><b>GREEN FINENCIAL SOLUTIONS (T) LTD <span class="pull-right">Login</span></b></h3>
                     </div>
@@ -61,7 +61,7 @@ and open the template in the editor.
                       </form>
                     </div>
                     
-                    <div class="panel-footer text-center">&COPY; {{ date("Y") }} Green Financial Solution</div>
+                    <div class="panel-footer text-center btn-success">&COPY; {{ date("Y") }} Green Financial Solution</div>
                   </div>
         
             </div>
