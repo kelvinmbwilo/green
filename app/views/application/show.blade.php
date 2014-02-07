@@ -23,30 +23,15 @@
           <ul class="list-group">
           <li class="list-group-item" style="line-height: 25px">
         <div class="row" style="padding: 5px;">
-            <div class="col-md-5" style="border-right: solid 1px">
-                  <h3>Applicaation Information<span class="pull-right"><b>{{ date("j M, Y",strtotime($applicat->created_at)) }}</b></span></h3>
-            
-                    Applicant:<b style="text-transform: capitalize">{{ $app->firstname." ".$app->middlename." ".$app->lastname; }}</b><br>
-                    Status:<b>{{$applicat->status }}</b><br>
-                    Applied Amount: Tsh <b>{{$applicat->applied_amount }}</b>/=<br>
-
-                    @if($applicat->amount_granted != 0)
-                    Granted Amount: <b><small>{{$applicat->amount_granted }}</small></b><br>
-                    @endif
-
-                    Bussiness: <b><small><a href="{{url("applicant/bussness/{$bus->id}") }}">{{$applicat->bussiness->discr }}</a></small></b><br>
-
-                    Collateral: <b><small>{{$applicat->collateral }}</small></b><br>
-
-                    @if($applicat->comments != "")
-                    Comments: <b><small>{{$applicat->comments }}</small></b><br>
-                    @endif
-                    <a href="#b" class="btn btn-xs pull-right text-danger deleteapp"><i class="fa fa-trash-o "></i> delete</a>
-                    <a href="{{url("applicant/edit/application/{$applicat->id}")}}" class="btn btn-xs pull-right"><i class="fa fa-pencil"></i> edit</a>
-           
+            <div class="col-md-5" style="border-right: solid 1px" id="applinfo">
+                  @include("application.info")
               </div>
               <div class="col-md-7">
                   <h3>Application Proccessing</h3>
+                  <div class="" id="pocesss">
+                      @include("application.process")
+                  </div>
+
               </div>
             </div>  
     </li>
@@ -57,7 +42,7 @@
             <div class="col-md-7 thumbnail">
            
                     <h3>Business</h3>
-                    <h4>{{$applicat->bussiness->discr }}</h4>
+                    <h4><a href="{{ url("applicant/bussness/{$applicat->bussiness->id}") }}"> {{$applicat->bussiness->discr }} </a></h4>
                     @include("bussness.info")
              
             </div>

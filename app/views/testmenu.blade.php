@@ -43,7 +43,8 @@
                     <ul>
                             <li><a href="{{ url("loans") }}"><i class='fa fa-plus'></i> Loans <i class="fa fa-chevron-right pull-right"></i></a></li>
                             <li><a href="#"><i class="fa fa-cog"></i> Bussiness <i class="fa fa-chevron-right pull-right"></i></a></li>
-                            <li><a href="{{ url("rules") }}"><i class="fa fa-cog"></i> Rules <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> Data Backup <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="{{ url("rules") }}"><i class="fa fa-cog"></i> Rules <i class="fa fa-chevron-right pull-right"></i></a></li>
                     </ul>
             </li>
 			

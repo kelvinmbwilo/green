@@ -2,7 +2,8 @@
           {{ Form::open(array("url"=>url("loans/add"),"class"=>"form-horizontal","id"=>"FileUploader")) }}
           <h4>Loan Information</h4>
           <div class='form-group'>
-              <div class='col-sm-12'>Loan Name (Identification)<br>{{ Form::text('name','',array('class'=>'form-control','placeholder'=>'Loan Name','required'=>'required')) }} </div>
+              <div class='col-sm-6'>Loan Name (Identification)<br>{{ Form::text('name','',array('class'=>'form-control','placeholder'=>'Loan Name','required'=>'required')) }} </div>
+              <div class='col-sm-6'>Percent Profit<br>{{ Form::text('profit','',array("pattern"=>"\d*",'class'=>'form-control','placeholder'=>'Percent Profit (%)','required'=>'required')) }}</div>
           </div>
           <h4>Loan Amount</h4>
           <div class='form-group'>

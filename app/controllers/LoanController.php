@@ -20,7 +20,7 @@ class LoanController extends \BaseController {
 	 */
 	public function create()
 	{
-                    return "my foot";
+
 	}
 
 	/**
@@ -36,6 +36,7 @@ class LoanController extends \BaseController {
             "maximum_amount" => Input::get("maxamount"),
             "MaxReturnTime"  => Input::get("maxtime"),
             "MinReturnTime"  => Input::get("mintime"),
+            "profit"         => Input::get("profit"),
             "other"          => Input::get("other")
         ));
         return "<h3 class='text-success text-center'><i class='fa fa-check'></i>Loan Added Successful</h3>";
@@ -79,6 +80,7 @@ class LoanController extends \BaseController {
         $loan->other          = Input::get("other");
         $loan->minReturnTime  = Input::get("mintime");
         $loan->MaxReturnTime  = Input::get("maxtime");
+        $loan->profit         = Input::get("profit");
         $loan->save();
         return "<h3 class='text-center text-success'>Loan Information Updated Successful</h3>";
 	}

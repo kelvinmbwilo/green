@@ -12,7 +12,8 @@
 <h3>Edit Loan Information</h3>
 <h4>Loan Information</h4>
 <div class='form-group'>
-    <div class='col-sm-12'>Loan Name (Identification)<br>{{ Form::text('name',$loan->name,array('class'=>'form-control','placeholder'=>'Loan Name','required'=>'required')) }} </div>
+    <div class='col-sm-6'>Loan Name (Identification)<br>{{ Form::text('name',$loan->name,array('class'=>'form-control','placeholder'=>'Loan Name','required'=>'required')) }} </div>
+    <div class='col-sm-6'>Percent Profit<br>{{ Form::text('profit',$loan->profit,array("pattern"=>"\d*",'class'=>'form-control','placeholder'=>'Percent Profit (%)','required'=>'required')) }}</div>
 </div>
 <h4>Loan Amount</h4>
 <div class='form-group'>
@@ -29,7 +30,7 @@
 
     <div class="col-sm-12">Other Information <br>{{ Form::textarea('other',$loan->other,array('class'=>'form-control','placeholder'=>'Other Information eg allowed people(Optional)','rows'=>'3')) }} </div>
 </div>
-<div id="output"></div>
+<div id="output1"></div>
 <div class='form-group text-center'>
     {{ Form::submit('Update',array('class'=>'btn btn-primary','id'=>'submitqn')) }}
     {{ Form::button('Cancel',array('class'=>'btn btn-danger','id'=>'canceledit')) }}
@@ -44,9 +45,9 @@
 
         $('#FileUploader').on('submit', function(e) {
             e.preventDefault();
-            $("#output").html("<h3><i class='fa fa-spin fa-spinner '></i><span>Making changes please wait...</span><h3>");
+            $("#output1").html("<h3><i class='fa fa-spin fa-spinner '></i><span>Making changes please wait...</span><h3>");
             $(this).ajaxSubmit({
-                target: '#output',
+                target: '#output1',
                 success:  afterSuccess
             });
 

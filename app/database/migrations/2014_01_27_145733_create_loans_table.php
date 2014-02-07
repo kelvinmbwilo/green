@@ -20,6 +20,7 @@ class CreateLoansTable extends Migration {
             $table->integer('maximum_amount');
             $table->integer('minReturnTime');
             $table->integer('MaxReturnTime');
+            $table->integer('profit');
             $table->text("other");
 			$table->timestamps();
 		});

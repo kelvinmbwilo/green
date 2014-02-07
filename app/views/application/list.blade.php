@@ -14,7 +14,7 @@
         </div>
         Status:<b>{{$applicat->status }}</b><br>
        Applied amount: Tsh <b>{{$applicat->applied_amount }}</b>/=<br>
-       Bussiness: <b><small>{{$applicat->bussiness->discr }}</small></b><br>
+       Business: <b><small>{{$applicat->bussiness->discr }}</small></b><br>
        Collateral: <b><small>{{$applicat->collateral }}</small></b><br>
        @if($applicat->comments != "")
        Comments: <b><small>{{$applicat->comments }}</small></b><br>

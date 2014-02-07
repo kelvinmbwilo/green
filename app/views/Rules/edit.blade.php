@@ -5,7 +5,7 @@
 
     <div class="col-sm-12">Loan Rules <br>{{ Form::textarea('other',$rule->value,array('class'=>'form-control','placeholder'=>'Loan Rules eg allowed people','rows'=>'4',"required"=>"required")) }} </div>
 </div>
-<div id="output"></div>
+<div id="output1"></div>
 <div class='form-group text-center'>
     {{ Form::submit('Update',array('class'=>'btn btn-primary','id'=>'submitqn')) }}
     {{ Form::button('Cancel',array('class'=>'btn btn-danger','id'=>'canceledit')) }}
@@ -20,9 +20,9 @@
 
         $('#FileUploader').on('submit', function(e) {
             e.preventDefault();
-            $("#output").html("<h3><i class='fa fa-spin fa-spinner '></i><span>Making changes please wait...</span><h3>");
+            $("#output1").html("<h3><i class='fa fa-spin fa-spinner '></i><span>Making changes please wait...</span><h3>");
             $(this).ajaxSubmit({
-                target: '#output',
+                target: '#output1',
                 success:  afterSuccess
             });
 

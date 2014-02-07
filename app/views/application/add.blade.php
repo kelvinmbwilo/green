@@ -59,7 +59,7 @@
              @else
              
              <div class='form-group'>
-                    {{ Form::label('business', 'Busines',array('class'=>'control-label col-sm-3')) }}
+                    {{ Form::label('business', 'Business',array('class'=>'control-label col-sm-3')) }}
                     <div class='col-sm-9'>{{ Form::select('business',Busssiness::where("apllicant_id",$app->id)->lists("discr","id"),'',array('class'=>'form-control','required'=>'requiered')) }}  </div>
                 </div>
              @endif
@@ -95,7 +95,7 @@
                         <div class='col-sm-6'>Postal Address<br>{{ Form::text('postal','',array('class'=>'form-control','placeholder'=>'Postal Address(Optional)')) }} </div>
                   </div>
                   <div class='form-group'>
-                        <div class='col-sm-6'>Residense<br>{{ Form::text('residense','',array('class'=>'form-control','placeholder'=>'Residence (Required)','required'=>'required')) }} </div>
+                        <div class='col-sm-6'>Residence<br>{{ Form::text('residense','',array('class'=>'form-control','placeholder'=>'Residence (Required)','required'=>'required')) }} </div>
                         <div class='col-sm-6'>Birth Date<br>{{ Form::text('birthdate','',array('class'=>'form-control','placeholder'=>'Bith Date','id'=>'Birth_Date')) }} </div>
                   </div>
                <div class='form-group'>

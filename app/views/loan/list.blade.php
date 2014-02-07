@@ -27,9 +27,10 @@ $loans = Loans::orderBy("created_at","desc")->get();
             <div class="col-xs-4">Minimum<br> {{ $loan->minReturnTime }} Month(s)</div>
             <div class="col-xs-4">Maximum<br> {{ $loan->MaxReturnTime }} Month(s)</div>
         </div>
+        <p><b>Percent Profit</b> {{ $loan->profit }}%</p>
         @if($loan->other != "")
         <p class="list-group-item-text">
-            {{ $loan->other }}
+            <b>Comments:</b> {{ $loan->other }}
         </p>
         @endif
         <p id="{{ $loan->id }}">

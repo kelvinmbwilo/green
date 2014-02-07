@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class ApplicationController
+ */
 class ApplicationController extends \BaseController {
 
 	/**
@@ -187,13 +190,81 @@ class ApplicationController extends \BaseController {
                     return View::make("application.show",  compact("applicat","app","bus","sponsor"))->with("msg","Sponsor Information Updated Successfull");
                 }
                 
-                public function updatesponsor($id){
-   
-                    $spo = Sponsor::find($id);
-                    
-                    $applicat = $spo->application;
-                    $app = $applicat->applicant;
-                     return View::make("application.editsponsor",  compact("spo","app","applicat"));
-                }
+        public function updatesponsor($id){
 
+            $spo = Sponsor::find($id);
+
+            $applicat = $spo->application;
+            $app = $applicat->applicant;
+             return View::make("application.editsponsor",  compact("spo","app","applicat"));
+        }
+
+        public function declineloan($id){
+            $applicat = Applications::find($id);
+            if($applicat->status == "granted"){
+                $applicat->granted()->delete();
+            }
+            $applicat->status = "declined";
+            $applicat->comments = Input::get("comm");
+            $applicat->amount_granted = 0;
+            $applicat->save();
+        }
+
+        public function grantloan($id){
+            $applicat = Applications::find($id);
+            $applicat->status = "granted";
+            $applicat->amount_granted = Input::get("granted");
+            $applicat->save();
+
+            $dur = Input::get("loan_duration")+1;
+            $interval = Input::get("duration")+1;
+            $finish = strtotime(Input::get("start") ." +".$dur." month" );
+            //echo date("Y-m-d",$finish);
+            $grant = GrantedLoans::create(array(
+                "applicant_id"          => Input::get("applicant"),
+                "application_id"        => Input::get("application"),
+                "bussiness_id"          => Input::get("business"),
+                "interval"              => $interval,
+                "interval_type"         => Input::get("duration_type"),
+                "loan_amount"           => Input::get("granted"),
+                "profit_percent"        => Input::get("profit"),
+                "amount_to_return"      => Input::get("return"),
+                "amount_per_return"     => Input::get("per_return"),
+                "loan_expected_duration"=> $dur,
+                "finish_date"           => date("Y-m-d",$finish),
+                "user_id"               => Auth::user()->id,
+                "start_date"            => Input::get("start")
+            ));
+            return $grant;
+        }
+
+        public function checkgranted($val,$am,$to,$dur){
+            $am = $am+1;
+            $dur =$dur+1;
+            $data = array();
+            foreach(Loans::all() as $loan){
+                if(in_array($val,range($loan->minimum_amount,$loan->maximum_amount))){
+                    if($dur > $loan->MaxReturnTime){
+                        $data['errors'] = "This loan can be paid within ".$loan->minReturnTime."-".$loan->MaxReturnTime." months";
+                    }elseif($dur < $loan->minReturnTime){
+                        $data['errors'] = "This loan can be paid within ".$loan->minReturnTime."-".$loan->MaxReturnTime." months";
+                    }
+                    else{
+                        $data['profit']     = $loan->profit;
+                        $data['amount_to']  = $val +($val * ($data['profit'] /100));
+                        if($to == "day"){
+                            $data['amount_per'] = $data['amount_to'] /(($dur*30)/$am);
+                        }if($to == "week"){
+                            $data['amount_per'] = $data['amount_to'] /(($dur*4)/$am);
+                        }if($to == "month"){
+                            $data['amount_per'] = $data['amount_to'] /($dur/$am);
+                        }if($to == "year"){
+                            $data['amount_per'] = $data['amount_to'] /(($dur/12)/$am);
+                        }
+                    }
+
+                }
+            }
+            echo json_encode($data);
+        }
 }

@@ -142,6 +142,31 @@ Route::get('applicant/add/application/sponsor/{id}',array( 'uses'=>'ApplicationC
 //adding aplicant sponsor information
 Route::post('applicant/add/application/sponsor/{id}',array('uses'=>'ApplicationController@storesponsor'));
 
+//declining application
+Route::post("application/decline/{id}",array("uses"=>"ApplicationController@declineloan"));
+
+//reshowing application application
+Route::get("application/process/show/{id}",function($id){
+    $applicat = Applications::find($id);
+    return View::make("application.process",compact("applicat"));
+});
+
+Route::get("application/show/{id}",function($id){
+    $applicat = Applications::find($id);
+    return View::make("application.info",compact("applicat"));
+});
+
+Route::get("application/grant/{id}",function($id){
+    $applicat = Applications::find($id);
+    return View::make("application.grant",compact("applicat"));
+});
+
+//granting application
+Route::post("application/grant/{id}",array("uses"=>"ApplicationController@grantloan"));
+
+//declining application
+Route::post("application/checkgranted/{val}/{am}/{to}/{dur}",array("uses"=>"ApplicationController@checkgranted"));
+
 
 /**
  * Managing Loans
