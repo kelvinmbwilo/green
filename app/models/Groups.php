@@ -22,6 +22,10 @@ class Groups extends Eloquent {
                 public function granted(){
                     return $this->hasMany('GroupGranted', 'group_id', 'id');
                 }
+
+                public function memberes(){
+                    return $this->hasMany('GroupMembers', 'group_id', 'id');
+                }
                 
                
 

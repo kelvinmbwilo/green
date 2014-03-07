@@ -42,7 +42,6 @@ foreach(Loans::all() as $loan){
     {{ Form::submit('Submit',array('class'=>'btn btn-primary','id'=>'submitqn')) }}
     <a href="#b" class="btn btn-danger" id="cancelgrant"><i class="fa fa-times"></i> Cancel</a>
 </div>
-    <h3 id="output"></h3>
 {{ Form::close() }}
 
 <script>

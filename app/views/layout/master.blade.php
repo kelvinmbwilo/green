@@ -21,8 +21,9 @@ and open the template in the editor.
         {{ HTML::style("style/delta.grey.css") }}
         {{ HTML::style("style/delta.main.css") }}
         {{ HTML::script("js/jquery-1.9.1.js") }}
+        <link href="http://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css">
     </head>
-    <body style="background-image: url({{asset("img/black_paper.png")}})">
+    <body style="/**font-family: Maven Pro;*/background-image: url({{asset("img/black_paper.png")}})">
         
             <div class="row">
                 

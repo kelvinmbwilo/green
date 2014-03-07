@@ -15,12 +15,13 @@ class CreateGroupApplicationTable extends Migration {
 		Schema::create('group_application', function(Blueprint $table)
 		{
 			$table->increments('id');
-                                                $table->integer('group_id');
-                                                $table->integer('applied_amount');
-                                                $table->integer('amount_granted');
-                                                $table->string('status');
-                                                $table->text('comments');
-                                                $table->integer('user_id');
+            $table->integer('group_id');
+            $table->integer('applied_amount');
+            $table->integer('amount_granted');
+            $table->integer('savings_per_return');
+            $table->string('status');
+            $table->text('comments');
+            $table->integer('user_id');
 			$table->timestamps();
 		});
 	}

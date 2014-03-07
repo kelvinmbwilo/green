@@ -10,11 +10,7 @@ class GroupReturn extends Eloquent {
 	protected $table = 'group_return';
                 
                 protected  $guarded = array('id');
- 
-                public function post(){
-                    return $this->hasMany('Post', 'subcategory', 'id');
-                }
-                
+
                 public function group(){
                     return $this->belongsTo('Groups', 'group_id', 'id');
                 }

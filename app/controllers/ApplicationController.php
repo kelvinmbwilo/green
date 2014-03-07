@@ -17,7 +17,7 @@ class ApplicationController extends \BaseController {
 
 	/**
 	 * Show the form for creating a new resource.
-	 *
+	 * @param  int  $id
 	 * @return Response
 	 */
 	public function create($id)
@@ -266,5 +266,30 @@ class ApplicationController extends \BaseController {
                 }
             }
             echo json_encode($data);
+        }
+
+        public function processreturnform($id){
+          $applicat = Applications::find($id);
+           $returns = $applicat->returns()->orderBy("created_at","desc");
+           $balance = 0;
+            $remain = 0;
+           if($returns->count() == 0){
+               $balance = $applicat->granted->amount_to_return - Input::get("return");
+           }else{
+               $remain = $applicat->granted->amount_per_return - Input::get("return");
+               $balance = $returns->first()->balance - Input::get("return");
+           }
+          Returns::create(array(
+              "applicant_id"    => $applicat->applicant->id,
+              "application_id"  => $id,
+              "bussiness_id"    => $applicat->bussiness_id,
+              "granted_id"      => $applicat->granted->id,
+              "amount"          => Input::get("return"),
+              "return_date"     => Input::get("returndate"),
+              "comments"        => Input::get("comments"),
+              "balance"         => $balance,
+              "remaining"       => $remain,
+              "user_id"         => Auth::user()->id
+          ));
         }
 }

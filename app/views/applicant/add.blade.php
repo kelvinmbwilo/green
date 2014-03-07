@@ -49,8 +49,8 @@
                 </div>
         
              <div class='form-group'>
-            {{ Form::label('residense', 'Residense Area',array('class'=>'control-label col-sm-4')) }}
-            <div class='col-sm-8'>{{ Form::text('residense','',array('class'=>'form-control','placeholder'=>'Residense Area','required'=>'required')) }} </div>
+            {{ Form::label('residense', 'Residence Area',array('class'=>'control-label col-sm-4')) }}
+            <div class='col-sm-8'>{{ Form::text('residense','',array('class'=>'form-control','placeholder'=>'Residence Area','required'=>'required')) }} </div>
             </div>
          </div>
          
@@ -72,7 +72,7 @@
             </div>
             <div class='form-group'>
             {{ Form::label('postal', 'Postal Address',array('class'=>'control-label col-sm-4')) }}
-            <div class='col-sm-8'>{{ Form::text('postal','',array('class'=>'form-control','placeholder'=>'Postal Address','required'=>'required')) }} </div>
+            <div class='col-sm-8'>{{ Form::text('postal','',array('class'=>'form-control','placeholder'=>'Postal Address')) }} </div>
             </div>
              
               <div class='form-group'>

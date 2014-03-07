@@ -34,8 +34,8 @@ $loans = Loans::orderBy("created_at","desc")->get();
         </p>
         @endif
         <p id="{{ $loan->id }}">
-            <a href="#e" title="edit Staff" class="editloan"><i class="fa fa-pencil text-info"></i> edit</a>&nbsp;&nbsp;&nbsp;
-            <a href="#b" title="delete Applicant" class="deleteloan"><i class="fa fa-trash-o text-danger"></i> delete</a>
+            <a href="#e" title="edit Loan" class="editloan"><i class="fa fa-pencil text-info"></i> edit</a>&nbsp;&nbsp;&nbsp;
+            <a href="#b" title="delete Loan" class="deleteloan"><i class="fa fa-trash-o text-danger"></i> delete</a>
         </p>
     </li>
     @endforeach

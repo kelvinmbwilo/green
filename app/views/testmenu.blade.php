@@ -19,8 +19,8 @@
             <li class="submenu">
                     <a href="#"><i class="fa fa-sitemap fa-2x"></i> <span>Groups</span> <i class="fa fa-chevron-down pull-right"></i></a>
                     <ul>
-                            <li><a href="#"><i class='fa fa-plus'></i> Add Group <i class="fa fa-chevron-right pull-right"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> Manage <i class="fa fa-chevron-right pull-right"></i></a></li>
+                            <li><a href="{{ url('groups/add') }}"><i class='fa fa-plus'></i> Add Group <i class="fa fa-chevron-right pull-right"></i></a></li>
+                            <li><a href="{{ url('groups') }}"><i class="fa fa-cog"></i> Manage <i class="fa fa-chevron-right pull-right"></i></a></li>
                     </ul>
             </li>
             <li class="submenu">
@@ -41,8 +41,8 @@
             <li class="submenu">
                     <a href="#"><i class="fa fa-cog fa-2x"></i> <span>Settings</span> <i class="fa fa-chevron-down pull-right"></i></a>
                     <ul>
-                            <li><a href="{{ url("loans") }}"><i class='fa fa-plus'></i> Loans <i class="fa fa-chevron-right pull-right"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> Bussiness <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="{{ url("loans") }}"><i class='fa fa-plus'></i> Loans <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="{{ url("settings/parameters") }}"><i class="fa fa-cog"></i> Bussiness <i class="fa fa-chevron-right pull-right"></i></a></li>
                         <li><a href="#"><i class="fa fa-cog"></i> Data Backup <i class="fa fa-chevron-right pull-right"></i></a></li>
                         <li><a href="{{ url("rules") }}"><i class="fa fa-cog"></i> Rules <i class="fa fa-chevron-right pull-right"></i></a></li>
                     </ul>

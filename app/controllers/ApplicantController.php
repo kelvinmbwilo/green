@@ -118,9 +118,17 @@ class ApplicantController extends \BaseController {
                                 "user_id"=>  Auth::user()->id,
                                 "action"  =>"Delete loan applicant named ".$name
                             ));
+
+                        if($app->group()->count() != 0){
+                            $app->group()->delete();
+                        }
                         $app->delete();
 	}
 
+   public function savings($id){
+       $app = Applicants::find($id);
+       return View::make("applicant.saving_trans",compact("app"));
+   }
         
       
 }

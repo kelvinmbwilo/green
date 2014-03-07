@@ -90,6 +90,11 @@ Route::post('applicant/delete/{id}',array('as'=>'deleteapp', 'uses'=>'ApplicantC
 //display a list of aplicants
 Route::get('applicant/{id}',array('as'=>'listapplicant', 'uses'=>'ApplicantController@show'));
 
+//displaying applicant transactions
+Route::get('applicant/transactions/{id}',array('uses'=>'ApplicantController@savings'));
+
+
+
 /*
  * Dealing with applicant bussiness
  * @BussnessController
@@ -142,6 +147,8 @@ Route::get('applicant/add/application/sponsor/{id}',array( 'uses'=>'ApplicationC
 //adding aplicant sponsor information
 Route::post('applicant/add/application/sponsor/{id}',array('uses'=>'ApplicationController@storesponsor'));
 
+
+
 //declining application
 Route::post("application/decline/{id}",array("uses"=>"ApplicationController@declineloan"));
 
@@ -167,6 +174,8 @@ Route::post("application/grant/{id}",array("uses"=>"ApplicationController@grantl
 //declining application
 Route::post("application/checkgranted/{val}/{am}/{to}/{dur}",array("uses"=>"ApplicationController@checkgranted"));
 
+//processing a return form
+Route::post("application/process/{id}",array("uses"=>"ApplicationController@processreturnform"));
 
 /**
  * Managing Loans
@@ -211,3 +220,144 @@ Route::post("rules/delete/{id}",array("uses"=>"RulesController@destroy"));
 
 //displaying a form to add a rules
 Route::post("rules/add",array("uses"=>"RulesController@store"));
+
+/**
+ * Managing Groups
+ * Using GroupController
+ */
+
+//listing groups
+Route::get("groups",array("uses"=>"GroupController@index"));
+
+//displaying a form to add a group
+Route::get("groups/add",array("uses"=>"GroupController@create"));
+
+//adding a group
+Route::post("groups/add",array("uses"=>"GroupController@store"));
+
+///////////////////////////////////////////////////////////////////
+////////////// Group Members /////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//Showing group info
+Route::get("groups/{id}",array("uses"=>"GroupController@show"));
+
+
+//listing group members
+Route::get("groups/members/{id}",array("uses"=>"GroupController@members"));
+
+//adding a group member from a form
+Route::post("groups/{id}/member/add",array("uses"=>"GroupController@addMember"));
+
+//display a list of group member
+Route::get("group/{id}/member/list",array("uses"=>"GroupController@listMember"));
+
+//displaying a form to add a ne group member that wa not on the system originaly
+Route::get("group/{id}/add/new",array("uses"=>"GroupController@addnew"));
+
+//display a list to add a group member from list
+Route::get("group/{id}/add/list",array("uses"=>"GroupController@addlist"));
+
+//adding a group member from list
+Route::post("group/{id}/add/list/{uid}",array("uses"=>"GroupController@memberfromlist"));
+
+//display a form to edit group members
+Route::get("group/{id}/member/edit/{uid}",array("uses"=>"GroupController@editmember"));
+
+//editing group members
+Route::post("group/{id}/member/edit/{uid}",array("uses"=>"GroupController@editmember1"));
+
+//editing group members
+Route::post("group/member/remove/{uid}",array("uses"=>"GroupController@removemember"));
+
+//displaying a form to add group members savings
+Route::get("group/{id}/member/savings/{uid}",array("uses"=>"GroupController@membersaving"));
+
+//adding group members savings
+Route::post("group/{id}/member/savings/{uid}",array("uses"=>"GroupController@addmembersaving"));
+
+///////////////////////////////////////////////////////////////
+/////////////Group Applications ////////////////////////////////
+///////////////////////////////////////////////////////////////
+//adding application
+Route::get("group/{id}/add/application",array("uses"=>"GroupAppController@index"));
+
+//adding application
+Route::post("group/{id}/add/application",array("uses"=>"GroupAppController@store"));
+
+//adding application
+Route::get("group/application/{id}",array("uses"=>"GroupAppController@show"));
+
+//showing a group application information
+Route::get("group/application/show/{id}",function($id){
+    $applicat = GroupApplication::find($id);
+    return View::make("groupapp.info",compact("applicat"));
+});
+
+//showing a group application information
+Route::get("group/{id}/application/list",function($id){
+    $group = Groups::find($id);
+    return View::make("groupapp.list",compact("group"));
+});
+
+//showing a group application information
+Route::get("group/application/add/{id}",function($id){
+    $group = Groups::find($id);
+    return View::make("groupapp.add",compact("group"));
+});
+
+//showing a group application information
+Route::get("group/application/edit/{id}",function($id){
+    $applicat = GroupApplication::find($id);
+    return View::make("groupapp.edit",compact("applicat"));
+});
+
+//editing a group application information
+Route::post("group/application/edit/{id}",array("uses"=>"GroupAppController@update"));
+
+//deleting a group application information
+Route::post("group/application/delete/{id}",array("uses"=>"GroupAppController@destroy"));
+
+//showing processing for a group
+Route::get("group/application/process/show/{id}",function($id){
+    $applicat = GroupApplication::find($id);
+    return View::make("groupapp.proccess",compact("applicat"));
+});
+
+//showing processing for a group
+Route::get("group/application/grant/{id}",function($id){
+    $applicat = GroupApplication::find($id);
+    return View::make("groupapp.grant",compact("applicat"));
+});
+
+//showing return process for a group
+Route::get("group/application/return/{id}",function($id){
+    $applicat = GroupApplication::find($id);
+    return View::make("groupapp.returns",compact("applicat"));
+});
+
+//declining application
+Route::post("group/application/decline/{id}",array("uses"=>"GroupAppController@declineloan"));
+
+//granting application
+Route::post("group/application/grant/{id}",array("uses"=>"GroupAppController@grantloan"));
+
+///////////////////////////////////////////////////////////////
+/////////////parameter settings ////////////////////////////////
+///////////////////////////////////////////////////////////////
+//displaying an index page
+Route::get("settings/parameters",array("uses"=>"ParameterController@index"));
+
+//adding a parameter
+Route::post("settings/parameter/add",array("uses"=>"ParameterController@store"));
+
+//editing a parameter
+Route::get("settings/parameter/list",array("uses"=>"ParameterController@show"));
+
+//editing a parameter
+Route::get("settings/parameter/edit/{id}",array("uses"=>"ParameterController@edit"));
+
+//editing a parameter
+Route::post("settings/parameter/edit/{id}",array("uses"=>"ParameterController@update"));
+
+//deleting a parameter
+Route::post("settings/parameter/delete/{id}",array("uses"=>"ParameterController@destroy"));

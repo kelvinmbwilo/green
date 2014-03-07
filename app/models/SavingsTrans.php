@@ -15,8 +15,8 @@ class SavingsTrans extends Eloquent {
                     return $this->belongsTo('Applicants', 'applicant_id', 'id');
                 }
                 
-                public function saving(){
-                    return $this->belongsTo('Category', 'saving_id', 'id');
+                public function savings(){
+                    return $this->belongsTo('Savings', 'saving_id', 'id');
                 }
                 
 

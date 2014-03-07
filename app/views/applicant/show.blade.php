@@ -79,57 +79,61 @@
              </div>
              <div class="col-sm-6">
                  <!--registered bussness-->
-             <div class="panel panel-default">
-                 
-      <div class="panel-body">
-          <a href="{{ url("applicant/{$app->id}/add/bussness") }}" class="btn btn-success btn-xs pull-right" title="Register another business">
-                  <i class="fa fa-plus"></i> Add Another
-              </a>
-          <h3 class='header'>Registered Business Information  
-          </h3>
-          
-          <?php $i = 0; ?>
-          <div class="panel-group" id="accordion">
-            @foreach($app->business as $bus)
-            <div class="panel panel-default">
-              <div class="panel-heading">
-                  <a href="{{ url("applicant/edit/bussness/{$bus->id}") }}" title='update business information' class="btn btn-warning btn-xs pull-right">
-                          <i class="fa fa-pencil"></i> Edit
-                      </a>
-                      <a href="{{ url("applicant/bussness/{$bus->id}") }}" class="btn btn-xs btn-primary pull-right" style="margin-right: 5px">
-                            <i class="fa fa-th-large"></i> Full Details
-                        </a>
-                      
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ $bus->id }}" title="click for more information">
-                      {{ $bus->discr }} 
-                      <i class="fa fa-chevron-down pull-left"></i>
-                  </a>
-                      
-                </h4>
-              </div>
-                @if($i == 0)
-              <div id="collapse{{ $bus->id }}" class="panel-collapse collapse in">
-                  @else
-              <div id="collapse{{ $bus->id }}" class="panel-collapse collapse">
-                  @endif
-                  <?php $i++ ?>
-                <div class="panel-body">
-                    @include("bussness.info")
+                 <div class="panel panel-default">
+
+                  <div class="panel-body">
+                      <a href="{{ url("applicant/{$app->id}/add/bussness") }}" class="btn btn-success btn-xs pull-right" title="Register another business">
+                              <i class="fa fa-plus"></i> Add Another
+                          </a>
+                      <h3 class='header'>Registered Business Information
+                      </h3>
+
+                      <?php $i = 0; ?>
+                      <div class="panel-group" id="accordion">
+                        @foreach($app->business as $bus)
+                        <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <a href="{{ url("applicant/edit/bussness/{$bus->id}") }}" title='update business information' class="btn btn-warning btn-xs pull-right">
+                                      <i class="fa fa-pencil"></i> Edit
+                                  </a>
+                                  <a href="{{ url("applicant/bussness/{$bus->id}") }}" class="btn btn-xs btn-primary pull-right" style="margin-right: 5px">
+                                        <i class="fa fa-th-large"></i> Full Details
+                                    </a>
+
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ $bus->id }}" title="click for more information">
+                                  {{ $bus->discr }}
+                                  <i class="fa fa-chevron-down pull-left"></i>
+                              </a>
+
+                            </h4>
+                          </div>
+                            @if($i == 0)
+                          <div id="collapse{{ $bus->id }}" class="panel-collapse collapse in">
+                              @else
+                          <div id="collapse{{ $bus->id }}" class="panel-collapse collapse">
+                              @endif
+                              <?php $i++ ?>
+                            <div class="panel-body">
+                                @include("bussness.info")
+                            </div>
+                          </div>
+                        </div>
+                        @endforeach
+
+                      </div>
                 </div>
-              </div>
-            </div>
-            @endforeach
-            
-          </div>
-    </div>
-      </div>
-     </div>
+                  </div>
+                 </div>
              </div>
-           
-             
+
+             <div class="panel panel-default col-sm-12">
+                 @include("bussness.cash_flow")
+             </div>
             
          </div>
+
+
              
              
             

@@ -27,7 +27,7 @@
                   @include("application.info")
               </div>
               <div class="col-md-7">
-                  <h3>Application Proccessing</h3>
+
                   <div class="" id="pocesss">
                       @include("application.process")
                   </div>
@@ -35,7 +35,9 @@
               </div>
             </div>  
     </li>
-    
+    <div class="thumbnail" style="margin-top: 5px">
+        @include('application.payment_table')
+    </div>
     <!--Displaying bussnes information for the applied loan-->
     <li class="list-group-item" style="line-height: 20px">
         <div class="row">

@@ -1,17 +1,19 @@
 <?php
 
 ?>
-<div class="row" id="procinfo">
+<div class="col-xs-12" id="procinfo">
     @if($applicat->status == "declined")
+    <h3>Application Processing</h3>
     <h4>This Application Was Declined</h4>
     <button class="btn btn-block btn-primary" title="Grant loan for this application" id="grant">
         <i class="fa fa-check fa-2x"></i> Grant
     </button>
     @elseif($applicat->status == "granted")
-    <button class="btn btn-block btn-danger" title="Decline This loan application" id="decline">
-        <i class="fa fa-times fa-2x"></i> Decline
-    </button>
+    <h3>Loan Processing</h3>
+    @include("application.returns")
+
     @else
+    <h3>Application Processing</h3>
     <button class="btn btn-block btn-primary" title="Grant loan for this application" id="grant">
         <i class="fa fa-check fa-2x"></i> Grant
     </button>

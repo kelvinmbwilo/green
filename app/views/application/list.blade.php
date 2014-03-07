@@ -12,15 +12,12 @@
             Application #{{++$i }}
             <span class="pull-right"><b>{{ date("j M, Y",strtotime($applicat->created_at)) }}</b></span>
         </div>
-        Status:<b>{{$applicat->status }}</b><br>
-       Applied amount: Tsh <b>{{$applicat->applied_amount }}</b>/=<br>
-       Business: <b><small>{{$applicat->bussiness->discr }}</small></b><br>
-       Collateral: <b><small>{{$applicat->collateral }}</small></b><br>
-       @if($applicat->comments != "")
-       Comments: <b><small>{{$applicat->comments }}</small></b><br>
-       @endif
+        @include("application.info")
+
        <a href="{{url("applicant/application/{$applicat->id}")}}" class="btn btn-xs"><i class="fa fa-th-large"></i> More Info</a>
-       <a href="{{url("applicant/edit/application/{$applicat->id}")}}" class="btn btn-xs "><i class="fa fa-pencil"></i> edit</a>
+       @if($applicat->granted()->count() == 0)
+        <a href="{{url("applicant/edit/application/{$applicat->id}")}}" class="btn btn-xs "><i class="fa fa-pencil"></i> edit</a>
+        @endif
     </li>
     @endforeach
 </ul>

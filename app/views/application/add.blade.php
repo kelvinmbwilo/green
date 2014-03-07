@@ -47,7 +47,10 @@
         @if($app->application()->where("status","pending")->get()->count() != 0)
         <h2 class="text-info"><i class="fa fa-exclamation"></i> Info</h2>
         <h4>You can not add application for this Applicant, he/she have already applied for a loan, The Application may either be processed or the applicant has an unpaid Loan</h4>
-        @else
+        @elseif($app->application()->where("status","granted")->get()->count() != 0)
+              <h2 class="text-info"><i class="fa fa-exclamation"></i> Info</h2>
+              <h4>You can not add application for this Applicant, he/she have already applied for a loan, The Application may either be processed or the applicant has an unpaid Loan</h4>
+         @else
          <h3>Application Form</h3>
         <div class="thumbnail">
         
@@ -73,7 +76,12 @@
             {{ Form::label('collateral', 'Collateral',array('class'=>'control-label col-sm-3')) }}
             <div class='col-sm-9'>{{ Form::textarea('collateral','',array('class'=>'form-control','placeholder'=>'Assets For Loan','rows'=>'3')) }} </div>
             </div>
-             
+
+            <div class='form-group'>
+                {{ Form::label('collateral_val', 'Approximated Collateral Value (in Tsh)',array('class'=>'control-label col-sm-3')) }}
+                <div class='col-sm-9'>{{ Form::text('collateral_val','',array("pattern"=>"\d*",'class'=>'form-control','placeholder'=>'Collateral Value','required'=>'required')) }} </div>
+            </div>
+
              <div class='form-group'>
             {{ Form::label('comments', 'Any Comments',array('class'=>'control-label col-sm-3')) }}
             <div class='col-sm-9'>{{ Form::textarea('comments','',array('class'=>'form-control','placeholder'=>'Any Comments','rows'=>'3')) }} </div>

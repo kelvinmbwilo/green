@@ -9,7 +9,7 @@
 @section('content')
     <div class="panel panel-default">
       <div class="panel-body">
-          <h3>System Acess Log Information For {{$user->firstname }} {{$user->middlename }} {{$user->lastname }}</h3>
+          <h3>System Access Log Information For {{$user->firstname }} {{$user->middlename }} {{$user->lastname }}</h3>
           <table class='table table-striped table-responsive' id='stafftale' >
               <thead>
                   <tr>

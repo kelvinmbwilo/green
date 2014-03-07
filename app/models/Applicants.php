@@ -9,31 +9,39 @@ class Applicants extends Eloquent {
 	 */
 	protected $table = 'applicants';
                 
-                protected  $guarded = array('id');
- 
-                public function savingtrans(){
-                    return $this->hasMany('SavingsTrans', 'applicant_id', 'id');
-                }
-                
-                public function savings(){
-                    return $this->hasMany('Savings', 'applicant_id', 'id');
-                }
-                
-                public function returns(){
-                    return $this->hasMany('Returns', 'applicant_id', 'id');
-                }
-                
-                 public function granted(){
-                    return $this->hasOne('GrantedLoans', 'applicant_id', 'id');
-                }
-                
-                public function business(){
-                    return $this->hasMany('Busssiness', 'apllicant_id', 'id');
-                }
-                
-                public function application(){
-                    return $this->hasMany('Applications', 'applicant_id', 'id');
-                }
+    protected  $guarded = array('id');
+
+    public function savingtrans(){
+        return $this->hasMany('SavingsTrans', 'applicant_id', 'id');
+    }
+
+    public function savings(){
+        return $this->hasOne('Savings', 'applicant_id', 'id');
+    }
+
+    public function returns(){
+        return $this->hasMany('Returns', 'applicant_id', 'id');
+    }
+
+     public function granted(){
+        return $this->hasOne('GrantedLoans', 'applicant_id', 'id');
+    }
+
+    public function business(){
+        return $this->hasMany('Busssiness', 'apllicant_id', 'id');
+    }
+
+    public function application(){
+        return $this->hasMany('Applications', 'applicant_id', 'id');
+    }
+
+    public function parameters(){
+        return $this->hasMany('Parameters', 'applicant_id', 'id');
+    }
+
+    public function group(){
+        return $this->hasOne('GroupMembers', 'applicant_id', 'id');
+    }
 
 
 }

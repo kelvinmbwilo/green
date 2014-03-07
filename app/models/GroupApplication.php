@@ -9,19 +9,23 @@ class GroupApplication extends Eloquent {
 	 */
 	protected $table = 'group_application';
                 
-                protected  $guarded = array('id');
- 
-                public function granted(){
-                    return $this->hasOne('GroupGranted', 'application_id', 'id');
-                }
-                
-                public function group(){
-                    return $this->belongsTo('Groups', 'group_id', 'id');
-                }
-                
-                public function user(){
-                    return $this->belongsTo('User', 'user_id', 'id');
-                }
+        protected  $guarded = array('id');
+
+        public function granted(){
+            return $this->hasOne('GroupGranted', 'application_id', 'id');
+        }
+
+        public function group(){
+            return $this->belongsTo('Groups', 'group_id', 'id');
+        }
+
+        public function user(){
+            return $this->belongsTo('User', 'user_id', 'id');
+        }
+
+        public function returns(){
+            return $this->hasMany('GroupReturn', 'application_id', 'id');
+        }
 
 }
 

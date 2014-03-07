@@ -15,12 +15,15 @@ class CreateGroupReturnTable extends Migration {
 		Schema::create('group_return', function(Blueprint $table)
 		{
 			$table->increments('id');
-                                                $table->string('group_id');
-                                                $table->integer('granted_id');
-                                                $table->integer('amount');
-                                                $table->date('return_date');
-                                                $table->string('comments');
-                                                $table->integer('user_id');
+            $table->string('group_id');
+            $table->integer('application_id');
+            $table->integer('granted_id');
+            $table->integer('amount');
+            $table->date('return_date');
+            $table->string('comments');
+            $table->integer("balance");
+            $table->integer("remaining");
+            $table->integer('user_id');
 			$table->timestamps();
 		});
 	}
