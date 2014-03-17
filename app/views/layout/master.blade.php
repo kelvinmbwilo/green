@@ -43,7 +43,8 @@ and open the template in the editor.
                     @yield("content")
                 </div>
             </div>
-        
+    {{ HTML::script("Highcharts/js/highcharts.js") }}
+    {{ HTML::script("Highcharts/js/modules/exporting.js") }}
         {{ HTML::script("js/jquery.form.js") }}
         {{ HTML::script("jqueryui/js/jquery-ui-1.10.3.custom.js") }}
         {{ HTML::script("bootstrap/js/bootstrap.js") }}

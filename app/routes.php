@@ -22,7 +22,7 @@ Route::get('/', function()
  */
 Route::get('home', function()
 {
-	return View::make('layout.master');
+	return View::make('dashboard');
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -341,6 +341,10 @@ Route::post("group/application/decline/{id}",array("uses"=>"GroupAppController@d
 //granting application
 Route::post("group/application/grant/{id}",array("uses"=>"GroupAppController@grantloan"));
 
+//granting application
+Route::post("group/loan/process/{id}",array("uses"=>"GroupAppController@processreturnform"));
+
+
 ///////////////////////////////////////////////////////////////
 /////////////parameter settings ////////////////////////////////
 ///////////////////////////////////////////////////////////////
@@ -361,3 +365,97 @@ Route::post("settings/parameter/edit/{id}",array("uses"=>"ParameterController@up
 
 //deleting a parameter
 Route::post("settings/parameter/delete/{id}",array("uses"=>"ParameterController@destroy"));
+
+
+///////////////////////////////////////////////////////////////
+/////////////parameter settings ////////////////////////////////
+///////////////////////////////////////////////////////////////
+//displaying an index page
+Route::get("applicant/{id}/balance_sheet/",array("uses"=>"BalanceSheetController@index"));
+
+//adding a balance sheet
+Route::get("applicant/{id}/balance_sheet/add",array("uses"=>"BalanceSheetController@create"));
+
+//adding a parameter
+Route::post("applicant/{id}/balance_sheet/add",array("uses"=>"BalanceSheetController@store"));
+
+//list all available cash flows
+Route::get("applicant/{id}/balance_sheet/list",array("uses"=>"BalanceSheetController@show"));
+
+//deleting a parameter
+Route::post("applicant/{id}/balance_sheet/delete/{yr}",array("uses"=>"BalanceSheetController@destroy"));
+
+//checking if balance sheet fot that year existed
+Route::post("applicant/{id}/balance_sheet/check/{yr}",array("uses"=>"BalanceSheetController@check"));
+
+///////////////////////////////////////////////////////////////
+/////////////Cash Flow parameter settings ////////////////////////////////
+///////////////////////////////////////////////////////////////
+//displaying an Cash Flow parameter index page
+Route::get("settings/cashflow/parameters",array("uses"=>"CashParameterController@index"));
+
+//adding a Cash Flow parameter
+Route::post("settings/cashflow/parameter/add",array("uses"=>"CashParameterController@store"));
+
+//editing a Cash Flow parameter
+Route::get("settings/cashflow/parameter/list",array("uses"=>"CashParameterController@show"));
+
+//editing a Cash Flow parameter
+Route::get("settings/cashflow/parameter/edit/{id}",array("uses"=>"CashParameterController@edit"));
+
+//editing a Cash Flow parameter
+Route::post("settings/cashflow/parameter/edit/{id}",array("uses"=>"CashParameterController@update"));
+
+//deleting a Cash Flow parameter
+Route::post("settings/cashflow/parameter/delete/{id}",array("uses"=>"CashParameterController@destroy"));
+
+//checking if balance sheet fot that year existed
+Route::post("applicant/{id}/cashflow/check/{yr}",array("uses"=>"CashFlowController@check"));
+
+///////////////////////////////////////////////////////////////
+/////////////Cash flow settings ////////////////////////////////
+///////////////////////////////////////////////////////////////
+//displaying an index page
+Route::get("applicant/{id}/cashflow/",array("uses"=>"CashFlowController@index"));
+
+//adding a balance sheet
+Route::get("applicant/{id}/cashflow/add",array("uses"=>"CashFlowController@create"));
+
+//adding a parameter
+Route::post("applicant/{id}/cashflow/add",array("uses"=>"CashFlowController@store"));
+
+//editing a parameter
+Route::get("applicant/{id}/cashflow/list",array("uses"=>"CashFlowController@show"));
+
+//editing a parameter
+Route::get("applicant/{id}/cashflow/edit/{bid}",array("uses"=>"CashFlowController@edit"));
+
+//editing a parameter
+Route::post("applicant/{id}/cashflow/edit/{bid}",array("uses"=>"CashFlowController@update"));
+
+//deleting a parameter
+Route::post("applicant/{id}/cashflow/delete/{yr}",array("uses"=>"CashFlowController@destroy"));
+
+///////////////////////////////////////////////////////////////
+/////////////Income statement settings ////////////////////////////////
+///////////////////////////////////////////////////////////////
+//displaying an index page
+Route::get("applicant/{id}/income/",array("uses"=>"IncomeController@index"));
+
+//adding a balance sheet
+Route::get("applicant/{id}/income/add",array("uses"=>"IncomeController@create"));
+
+//adding a parameter
+Route::post("applicant/{id}/income/add",array("uses"=>"IncomeController@store"));
+
+//editing a parameter
+Route::get("applicant/{id}/income/list",array("uses"=>"IncomeController@show"));
+
+//editing a parameter
+Route::get("applicant/{id}/income/edit/{bid}",array("uses"=>"IncomeController@edit"));
+
+//editing a parameter
+Route::post("applicant/{id}/income/edit/{bid}",array("uses"=>"IncomeController@update"));
+
+//deleting a parameter
+Route::post("applicant/{id}/income/delete/{yr}",array("uses"=>"IncomeController@destroy"));

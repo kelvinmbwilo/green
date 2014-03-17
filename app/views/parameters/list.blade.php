@@ -6,7 +6,7 @@
  * Time: 10:58 AM
  */
 //creating a list of loans from database
-$parameter = Parameters::orderBy("created_at","desc")->get();
+$parameter = Parameters::where("status","active")->orderBy("created_at","desc")->get();
 ?>
 @if($parameter->count() == 0)
 <h2>No Parameters Defined Yet</h2>
@@ -16,11 +16,9 @@ $parameter = Parameters::orderBy("created_at","desc")->get();
     <li class="list-group-item">
 
         <p class="list-group-item-text">
-            name: {{ $param->name }}<span class="pull-right"> type: {{ $param->name }} </span><br/>
-            {{ $param->discr }} <br />
-            @if($param->pre_defined != "" )
-            possible Values: {{ $param->pre_defined }}
-            @endif
+            name: {{ $param->name }}<span class="pull-right">{{ $param->flow }} </span><br/>
+
+
         </p>
         <p id="{{ $param->id }}">
             <a href="#e" title="edit rule" class="editrule"><i class="fa fa-pencil text-info"></i> edit</a>&nbsp;&nbsp;&nbsp;
@@ -36,6 +34,7 @@ $parameter = Parameters::orderBy("created_at","desc")->get();
             var id = $(this).parent().attr("id");
             var url= "<?php echo url("settings/parameter/edit/") ?>/";
             url += id;
+            $("#editll").show();
             $("#editll").html("<i class='fa fa-spinner fa-spin fa-3x'></i>Loading Content...");
             $("#editll").load(url)
         })

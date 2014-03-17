@@ -1,3 +1,12 @@
+<?php
+$gsaving = 0;
+foreach($group->memberes as $gmember){
+    $sav = ($gmember->applicant->savings()->count() == 0)?0:$gmember->applicant->savings->amount;
+    $gsaving += $sav;
+}
+?>
+<h4>Members:{{ $group->memberes()->count() }}</h4>
+<h4>Savings:{{ $gsaving }}</h4>
 <ul class="list-group">
     @if($group->memberes()->count() == 0)
         <h2>No Members</h2>

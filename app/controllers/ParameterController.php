@@ -83,7 +83,8 @@ class ParameterController extends \BaseController {
 	public function destroy($id)
 	{
 		$param = Parameters::find($id);
-        $param->delete();
+        $param->status  = "inactive";
+        $param->save();
 	}
 
 }

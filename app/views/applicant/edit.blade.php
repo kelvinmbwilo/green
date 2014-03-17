@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('breadcumbs')
-    <li><a href="#">Home</a></li>
+    <li><a href="{{ url('home') }}">Home</a></li>
     <li><a href="{{ url("applicants") }}">applicants</a></li>
     <li ><a href="{{ url("applicant/{$app->id}") }}">{{ $app->firstname." ".$app->middlename." ".$app->lastname; }}</a></li>
     <li class="active">edit</li>

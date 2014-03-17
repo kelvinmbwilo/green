@@ -1,3 +1,4 @@
+
 <p class="lead">Group Members</p>
 <ul class="list-group">
     @if($group->memberes()->count() == 0)

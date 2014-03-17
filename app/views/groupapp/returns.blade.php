@@ -18,11 +18,11 @@
          <div class="col-xs-4"> Remaining: {{ $ret->remaining }}</div>
          <div class="col-xs-4">Balance: {{ $ret->balance }}</div>
     @endif
-    {{ Form::open(array("url"=>url("application/process/{$applicat->id}"),"class"=>"form-horizontal","id"=>"FileUploader2")) }}
+    {{ Form::open(array("url"=>url("group/loan/process/{$applicat->id}"),"class"=>"form-horizontal","id"=>"FileUploader2")) }}
     <div class="form-group">
         <div class='col-sm-6'>Loan Amount<br>{{ Form::text('return',$amount,array("pattern"=>"\d*",'class'=>'form-control','placeholder'=>'Returned Amount','required'=>'required')) }} </div>
 
-        <div class='col-sm-6'>Savings<br>{{ Form::text('saving','',array("pattern"=>"\d*",'class'=>'form-control','placeholder'=>'Returned Amount','required'=>'required')) }} </div>
+        <div class='col-sm-6'>Savings<br>{{ Form::text('saving',$applicat->savings_per_return,array("pattern"=>"\d*",'class'=>'form-control','placeholder'=>'Returned Amount','required'=>'required')) }} </div>
 
         <div class='col-sm-6'>date<br>{{ Form::text('returndate',$dat,array('class'=>'form-control','placeholder'=>'Start Year','required'=>'required','id'=>'returndate')) }} </div>
      </div>
@@ -45,10 +45,10 @@
             {{ $member->applicant->firstname }} {{ $member->applicant->middlename }} {{ $member->applicant->lastname }}
         </div>
         <div class="col-sm-3">
-            <input type="text" class="form-control loans" value="{{ $applicat->granted->amount_per_return/$applicat->group->memberes()->count() }}">
+            <input name="returns{{ $member->applicant->id }}" type="text" class="form-control loans" value="{{ $applicat->granted->amount_per_return/$applicat->group->memberes()->count() }}">
         </div>
         <div class="col-sm-3">
-            <input type="text" class="form-control saving" value="" placeholder="savings">
+            <input name="savings{{ $member->applicant->id }}" type="text" class="form-control saving" value="{{ $applicat->savings_per_return/$applicat->group->memberes()->count() }}" placeholder="savings">
         </div>
     </div>
 
@@ -107,8 +107,8 @@
 
         function afterSuccess2(){
             $("#pocesss").html("<h3><i class='fa fa-spin fa-spinner '></i><span>Loading contents...</span><h3>");
-            $("#applinfo").load("<?php echo url("application/show/{$applicat->id}") ?>");
-            $("#pocesss").load("<?php echo url("application/process/show/{$applicat->id}") ?>");
+            $("#applinfo").load("<?php echo url("group/application/show/{$applicat->id}") ?>");
+            $("#pocesss").load("<?php echo url("group/application/process/show/{$applicat->id}") ?>");
         }
     });
 

@@ -65,6 +65,11 @@ and open the template in the editor.
                   </div>
         
             </div>
+            <script>
+                $(document).ready(function(){
+                    $("input[name=email]").focus();
+                })
+            </script>
         {{ HTML::script("bootstrap/js/bootstrap") }}
         {{ HTML::script("js/script1.js") }}
     </body>

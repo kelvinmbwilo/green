@@ -35,12 +35,20 @@ class Applicants extends Eloquent {
         return $this->hasMany('Applications', 'applicant_id', 'id');
     }
 
-    public function parameters(){
-        return $this->hasMany('Parameters', 'applicant_id', 'id');
-    }
-
     public function group(){
         return $this->hasOne('GroupMembers', 'applicant_id', 'id');
+    }
+
+    public function balance(){
+        return $this->hasMany('BalanceSheet', 'applicant_id', 'id');
+    }
+
+    public function cashflow(){
+        return $this->hasMany('CashFlow', 'applicant_id', 'id');
+    }
+
+    public function income(){
+        return $this->hasMany('IncomeStatement', 'applicant_id', 'id');
     }
 
 

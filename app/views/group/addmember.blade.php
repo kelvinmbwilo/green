@@ -14,8 +14,7 @@
         <div class="panel-body">
             <div class="row" id="">
               <h3>{{ $group->name }}</h3>
-              <p>Group Members <span class="badge">{{ $group->memberes()->count() }}</span> </p>
-              <p>Total Savings </p>
+
             </div>
             <h3>Group Members</h3>
 

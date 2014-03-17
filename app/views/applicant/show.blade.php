@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('breadcumbs')
-    <li><a href="#">Home</a></li>
+    <li><a href="{{ url('home') }}">Home</a></li>
     <li><a href="{{ url("applicants") }}">applicants</a></li>
     <li class="active" style='text-transform: capitalize'>{{ $app->firstname." ".$app->middlename." ".$app->lastname; }}</li>
 @stop
@@ -16,6 +16,9 @@
          
     <div class="panel panel-default">
       <div class="panel-body">
+          <a href="{{ url("applicant/{$app->id}/balance_sheet") }}">Balance Sheet</a>
+          <a href="{{ url("applicant/{$app->id}/income") }}">Income Statement</a>
+          <a href="{{ url("applicant/{$app->id}/cashflow/") }}">Cash Flow</a>
           <h3 class='header'>
               Applicant Information
               <a href="{{ url("applicant/edit/{$app->id}") }}" class='pull-right' title="update information">
@@ -127,10 +130,6 @@
                  </div>
              </div>
 
-             <div class="panel panel-default col-sm-12">
-                 @include("bussness.cash_flow")
-             </div>
-            
          </div>
 
 

@@ -1,8 +1,8 @@
 @extends('layout.master')
 
 @section('breadcumbs')
-<li><a href="#">Home</a></li>
-<li class="active">business Parameters</li>
+<li><a href="{{ url('home') }}">Home</a></li>
+<li class="active">balance sheet Parameters</li>
 @stop
 
 @section('content')

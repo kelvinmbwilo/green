@@ -27,5 +27,12 @@ class GroupApplication extends Eloquent {
             return $this->hasMany('GroupReturn', 'application_id', 'id');
         }
 
+        public function member_returns(){
+            return $this->hasMany('MemberReturn', 'application_id', 'id');
+        }
+
+
+
+
 }
 

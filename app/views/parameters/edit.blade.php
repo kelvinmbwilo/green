@@ -4,8 +4,11 @@
 
     <div class='col-sm-12'>Parameter <br>{{ Form::text('name',$param->name,array('class'=>'form-control','placeholder'=>'Parameter','required'=>'required')) }} </div>
 </div>
+<?php
+$arr = array("Non Current Asset"=>"Non Current Asset", "Current Asset"=>"Current Asset","Non Current Liabilities"=>"Non Current Liabilities","Current Liabilities"=>"Current Liabilities","Equity"=>"Equity");
+?>
 <div class='form-group'>
-    <div class='col-sm-12'>Cash Flow Type<br>{{ Form::select('flow',array("in"=>"Cash In Flow","out"=>"Cash Out Flow"),$param->flow,array('class'=>'form-control','required'=>'requiered')) }} </div>
+    <div class='col-sm-12'>Used For<br>{{ Form::select('flow',$arr,$param->flow,array('class'=>'form-control','required'=>'requiered')) }} </div>
 </div>
 <div id="output"></div>
 <div class='form-group text-center'>

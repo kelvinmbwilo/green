@@ -41,16 +41,14 @@ $group = $applicat->group;
             <!--Displaying bussnes information for the applied loan-->
             <li class="list-group-item" style="line-height: 20px">
                 <div class="row">
-                    <div class="col-md-7 thumbnail">
-
-                        <h3>Group Members</h3>
-
-                        @include("group.listmembers")
+                    <div class="col-md-12 thumbnail">
+                        @include("groupapp.payment_table")
+                    </div>
+                    <div class="col-md-12 thumbnail">
+                        @include("group.members")
 
                     </div>
-                    <div class="col-md-5 ">
 
-                    </div>
                 </div>
             </li>
 

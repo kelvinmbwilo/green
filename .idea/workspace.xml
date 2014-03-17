@@ -2,64 +2,73 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1644e4b-2897-4cb0-ac6e-6efe3083e70d" name="Default" comment="managing loan granting&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/GroupController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/GroupMembers.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Outflow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/Parameters.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/add.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/add.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/parameters/add.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/addfromlist.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/addmember.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/addsavings.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/bussness/cash_flow.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/parameters/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/editmember.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/grant.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/parameters/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/info.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/list.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/parameters/list.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/listmembers.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/members.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/newmember.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/bussness/parameters.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/application/payment_table.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/proccess.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/application/returns.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/returns.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/applicant/saving_trans.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/group/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_27_145800_create_returns_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_27_145800_create_returns_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_28_065015_create_group_application_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_28_065015_create_group_application_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_28_065257_create_group_return_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_28_065257_create_group_return_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ApplicantController.php" afterPath="$PROJECT_DIR$/app/controllers/ApplicantController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/CashFlow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/CashParameter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/MemberReturn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/QualitativeQuestions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/balance_sheet/add.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cash_flow/add.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cash_flow/add_parameter.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/dashboard.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/balance_sheet/edit.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cash_flow/edit_parameter.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/balance_sheet/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cash_flow/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/balance_sheet/list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cash_flow/list.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cash_flow/list_parameters.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/member_table.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cash_flow/parameter_index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groupapp/payment_table.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/balance_sheet/ratios.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/balance_sheet/show.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/cash_flow/show.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/balance_sheet/values.blade.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_02_25_174417_create_parameter_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_02_25_174444_create_inflow_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/database/migrations/2014_02_25_174503_create_outflow_table.php" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/Inflow.php" afterPath="$PROJECT_DIR$/app/models/IncomeStatement.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/models/Outflow.php" afterPath="$PROJECT_DIR$/app/models/BalanceSheet.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/database/migrations/2014_01_28_065506_create_group_granted_table.php" afterPath="$PROJECT_DIR$/app/database/migrations/2014_01_28_065506_create_group_granted_table.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Applicants.php" afterPath="$PROJECT_DIR$/app/models/Applicants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ApplicationController.php" afterPath="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/GroupAppController.php" afterPath="$PROJECT_DIR$/app/controllers/GroupAppController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/GroupApplication.php" afterPath="$PROJECT_DIR$/app/models/GroupApplication.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/GroupReturn.php" afterPath="$PROJECT_DIR$/app/models/GroupReturn.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Groups.php" afterPath="$PROJECT_DIR$/app/models/Groups.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/SavingsTrans.php" afterPath="$PROJECT_DIR$/app/models/SavingsTrans.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.php" afterPath="$PROJECT_DIR$/app/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/ParameterController.php" afterPath="$PROJECT_DIR$/app/controllers/ParameterController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Parameters.php" afterPath="$PROJECT_DIR$/app/models/Parameters.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/add.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/add.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/add.blade.php" afterPath="$PROJECT_DIR$/app/views/application/add.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/grant.blade.php" afterPath="$PROJECT_DIR$/app/views/application/grant.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/Rules/index.blade.php" afterPath="$PROJECT_DIR$/app/views/Rules/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/group/index.blade.php" afterPath="$PROJECT_DIR$/app/views/group/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/info.blade.php" afterPath="$PROJECT_DIR$/app/views/application/info.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/list.blade.php" afterPath="$PROJECT_DIR$/app/views/application/list.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/loan/list.blade.php" afterPath="$PROJECT_DIR$/app/views/loan/list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bussness/add.blade.php" afterPath="$PROJECT_DIR$/app/views/bussness/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/group/add.blade.php" afterPath="$PROJECT_DIR$/app/views/group/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groupapp/add.blade.php" afterPath="$PROJECT_DIR$/app/views/groupapp/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parameters/add.blade.php" afterPath="$PROJECT_DIR$/app/views/parameters/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user/add.blade.php" afterPath="$PROJECT_DIR$/app/views/user/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/group/addmember.blade.php" afterPath="$PROJECT_DIR$/app/views/group/addmember.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/addsponser.blade.php" afterPath="$PROJECT_DIR$/app/views/application/addsponser.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/application/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bussness/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/bussness/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parameters/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/parameters/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user/edit.blade.php" afterPath="$PROJECT_DIR$/app/views/user/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/editsponsor.blade.php" afterPath="$PROJECT_DIR$/app/views/application/editsponsor.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groupapp/index.blade.php" afterPath="$PROJECT_DIR$/app/views/groupapp/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/loan/index.blade.php" afterPath="$PROJECT_DIR$/app/views/loan/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parameters/index.blade.php" afterPath="$PROJECT_DIR$/app/views/parameters/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/parameters/list.blade.php" afterPath="$PROJECT_DIR$/app/views/parameters/list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user/list.blade.php" afterPath="$PROJECT_DIR$/app/views/user/list.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/group/listmembers.blade.php" afterPath="$PROJECT_DIR$/app/views/group/listmembers.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user/log.blade.php" afterPath="$PROJECT_DIR$/app/views/user/log.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/manage.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/manage.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/login.blade.php" afterPath="$PROJECT_DIR$/app/views/login.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layout/master.blade.php" afterPath="$PROJECT_DIR$/app/views/layout/master.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/process.blade.php" afterPath="$PROJECT_DIR$/app/views/application/process.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/group/members.blade.php" afterPath="$PROJECT_DIR$/app/views/group/members.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/payment_table.blade.php" afterPath="$PROJECT_DIR$/app/views/application/payment_table.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groupapp/returns.blade.php" afterPath="$PROJECT_DIR$/app/views/groupapp/returns.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/applicant/show.blade.php" afterPath="$PROJECT_DIR$/app/views/applicant/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/show.blade.php" afterPath="$PROJECT_DIR$/app/views/application/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/bussness/show.blade.php" afterPath="$PROJECT_DIR$/app/views/bussness/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groupapp/show.blade.php" afterPath="$PROJECT_DIR$/app/views/groupapp/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/testmenu.blade.php" afterPath="$PROJECT_DIR$/app/views/testmenu.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -84,93 +93,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GroupAppController.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/GroupAppController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="72" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.2480315" vertical-offset="1890" max-vertical-offset="2574">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/group/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="31" selection-start="743" selection-end="743" vertical-scroll-proportion="-14.0" vertical-offset="108" max-vertical-offset="666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/groupapp/add.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="117" selection-start="1057" selection-end="1057" vertical-scroll-proportion="-7.3333335" vertical-offset="108" max-vertical-offset="1008">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="proccess.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/groupapp/proccess.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="23" selection-start="395" selection-end="395" vertical-scroll-proportion="7.9259257" vertical-offset="412" max-vertical-offset="1404">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/groupapp/show.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="25" selection-start="110" selection-end="110" vertical-scroll-proportion="8.666667" vertical-offset="324" max-vertical-offset="1566">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="info.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/groupapp/info.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="1350" selection-end="1350" vertical-scroll-proportion="-15.259259" vertical-offset="74" max-vertical-offset="594">
-              <folding>
-                <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grant.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/groupapp/grant.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="79" selection-start="2864" selection-end="2881" vertical-scroll-proportion="-7.5925927" vertical-offset="623" max-vertical-offset="2466">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/groupapp/list.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="70" selection-start="2831" selection-end="2831" vertical-scroll-proportion="-28.666666" vertical-offset="162" max-vertical-offset="1170">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listmembers.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/group/listmembers.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="16" selection-start="0" selection-end="5569" vertical-scroll-proportion="-28.0" vertical-offset="0" max-vertical-offset="2142">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="292" column="36" selection-start="10579" selection-end="10579" vertical-scroll-proportion="21.25926" vertical-offset="5830" max-vertical-offset="6642">
+            <state line="460" column="79" selection-start="17311" selection-end="17311" vertical-scroll-proportion="-16.407408" vertical-offset="7837" max-vertical-offset="8388">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.blade.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/applicant/show.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="54" selection-start="793" selection-end="793" vertical-scroll-proportion="0.40632054" vertical-offset="162" max-vertical-offset="2736">
               <folding />
             </state>
           </provider>
@@ -194,57 +129,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/applicant/manage.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/application/returns.php" />
-        <option value="$PROJECT_DIR$/app/views/application/grant.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_01_27_145800_create_returns_table.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ApplicationController.php" />
-        <option value="$PROJECT_DIR$/app/views/application/info.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/application/add.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/application/list.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/bussness/parameters.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/application/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/application/editsponsor.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/application/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/balance_sheet/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/bussness/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/bussness/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/bussness/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/group/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/groupapp/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/loan/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/user/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/user/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/user/list.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/user/log.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/groupapp/member_table.blade.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_12_093957_create_income_parameter_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_12_094203_create_cash_flow_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_08_024354_create_qualitative_questions_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_08_023943_create_balance_sheet_table.php" />
+        <option value="$PROJECT_DIR$/app/views/groupapp/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/login.blade.php" />
         <option value="$PROJECT_DIR$/app/views/testmenu.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_25_174444_create_inflow_table.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_25_174503_create_outflow_table.php" />
-        <option value="$PROJECT_DIR$/app/models/Parameters.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_02_25_174417_create_parameter_table.php" />
-        <option value="$PROJECT_DIR$/app/models/Inflow.php" />
-        <option value="$PROJECT_DIR$/app/models/Outflow.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/list_parameters.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/add_parameter.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/edit_parameter.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/edit_parameter.blade.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_12_093938_create_cash_parameter_table.php" />
+        <option value="$PROJECT_DIR$/app/controllers/CashParameterController.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/list_parameters.blade.php" />
+        <option value="$PROJECT_DIR$/app/models/CashFlow.php" />
+        <option value="$PROJECT_DIR$/app/models/CashParameter.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/parameter_index.blade.php" />
         <option value="$PROJECT_DIR$/app/views/parameters/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/parameters/list.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/parameters/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_12_093914_create_balance_parameter_table.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_12_093914_create_parameter_table.php" />
         <option value="$PROJECT_DIR$/app/controllers/ParameterController.php" />
         <option value="$PROJECT_DIR$/app/views/parameters/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/application/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/application/returns.blade.php" />
-        <option value="$PROJECT_DIR$/app/models/User.php" />
-        <option value="$PROJECT_DIR$/app/views/group/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/application/payment_table.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/application/process.blade.php" />
-        <option value="$PROJECT_DIR$/app/models/GroupReturn.php" />
-        <option value="$PROJECT_DIR$/app/models/GroupApplication.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_01_28_065257_create_group_return_table.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/proccess.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/returns.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/bussness/cash_flow.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/layout/master.blade.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_01_28_065015_create_group_application_table.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/list.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/GroupController.php" />
-        <option value="$PROJECT_DIR$/app/views/group/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/models/Applicants.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ApplicantController.php" />
-        <option value="$PROJECT_DIR$/app/views/group/members.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/applicant/saving_trans.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/parameters/list.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/list.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/BalanceSheetController.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/balance_sheet/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/balance_sheet/list.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/CashFlowController.php" />
+        <option value="$PROJECT_DIR$/app/views/balance_sheet/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/cash_flow/add.blade.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_03_08_024209_create_income_statement_table.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/info.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/groupapp/grant.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/GroupAppController.php" />
+        <option value="$PROJECT_DIR$/app/models/IncomeStatement.php" />
+        <option value="$PROJECT_DIR$/app/models/Applicants.php" />
+        <option value="$PROJECT_DIR$/app/views/applicant/show.blade.php" />
       </list>
     </option>
   </component>
@@ -287,6 +222,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -355,7 +291,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="groupapp" />
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -373,13 +309,96 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cash_flow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="green" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="green" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="balance_sheet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="green" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="green" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="applicant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="green" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="green" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="green" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="green" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,6 +410,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/cash_flow" />
       <recent name="$PROJECT_DIR$/app/views/groupapp" />
     </key>
   </component>
@@ -446,21 +466,21 @@
     <frame x="-1" y="27" width="1368" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1203252" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="0" y="292" width="1366" height="210" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16585366" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="0" y="292" width="1366" height="210" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23863636" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22954546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21060605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23333333" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2682927" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -470,18 +490,18 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1203252" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="0" y="292" width="1366" height="210" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2682927" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="0" y="292" width="1366" height="210" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23333333" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22575757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28636363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -507,299 +527,345 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/parameters/add.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/user/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="80" selection-start="1389" selection-end="1457" vertical-scroll-proportion="-19.333334" vertical-offset="108" max-vertical-offset="792" />
+        <state line="3" column="34" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1692" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parameters/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/user/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="69" selection-start="95" selection-end="95" vertical-scroll-proportion="-0.6666667" vertical-offset="0" max-vertical-offset="864" />
+        <state line="3" column="34" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1566" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ParameterController.php">
+    <entry file="file://$PROJECT_DIR$/app/views/user/list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="68" selection-start="1382" selection-end="1382" vertical-scroll-proportion="-25.11111" vertical-offset="636" max-vertical-offset="1692" />
+        <state line="3" column="34" selection-start="84" selection-end="84" vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="1494" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parameters/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/user/log.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="42" selection-start="337" selection-end="346" vertical-scroll-proportion="-4.0" vertical-offset="162" max-vertical-offset="828" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/parameters/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="47" selection-start="1180" selection-end="1180" vertical-scroll-proportion="2.0370371" vertical-offset="703" max-vertical-offset="1206" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="49" selection-start="1266" selection-end="1266" vertical-scroll-proportion="0.30508474" vertical-offset="540" max-vertical-offset="1692" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="48" selection-start="965" selection-end="973" vertical-scroll-proportion="0.0" vertical-offset="936" max-vertical-offset="1116" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/group/editmember.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="739" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/payment_table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/process.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="10" selection-end="822" vertical-scroll-proportion="-11.333333" vertical-offset="108" max-vertical-offset="1440" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/returns.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="52" selection-start="136" selection-end="136" vertical-scroll-proportion="-0.0" vertical-offset="72" max-vertical-offset="1206" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/grant.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="14" selection-start="3767" selection-end="3767" vertical-scroll-proportion="-44.0" vertical-offset="54" max-vertical-offset="2286" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="238" column="9" selection-start="8234" selection-end="9607" vertical-scroll-proportion="-13.259259" vertical-offset="2216" max-vertical-offset="3276" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Applications.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="17" selection-start="240" selection-end="362" vertical-scroll-proportion="-3.3333333" vertical-offset="180" max-vertical-offset="792" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_28_065506_create_group_granted_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="48" selection-start="446" selection-end="480" vertical-scroll-proportion="-5.3333335" vertical-offset="162" max-vertical-offset="918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_27_145800_create_returns_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="528" selection-end="691" vertical-scroll-proportion="-7.3333335" vertical-offset="162" max-vertical-offset="846" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_28_065257_create_group_return_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="388" selection-end="402" vertical-scroll-proportion="-7.3333335" vertical-offset="108" max-vertical-offset="828" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/GroupMembers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="29" selection-start="331" selection-end="340" vertical-scroll-proportion="0.74816626" vertical-offset="0" max-vertical-offset="522" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groupapp/returns.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="9" selection-start="2857" selection-end="4664" vertical-scroll-proportion="0.0" vertical-offset="2106" max-vertical-offset="2214" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/bussness/cash_flow.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="0" selection-start="4778" selection-end="4778" vertical-scroll-proportion="-57.851852" vertical-offset="598" max-vertical-offset="2718" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layout/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="45" selection-start="1134" selection-end="1134" vertical-scroll-proportion="0.40358743" vertical-offset="270" max-vertical-offset="1044" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Parameters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="16" selection-start="13" selection-end="23" vertical-scroll-proportion="0.078431375" vertical-offset="0" max-vertical-offset="459" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="19" selection-start="5495" selection-end="5495" vertical-scroll-proportion="0.15923567" vertical-offset="2283" max-vertical-offset="2754" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/bussness/info.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1008" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/GroupApplication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="248" selection-end="255" vertical-scroll-proportion="0.16735537" vertical-offset="153" max-vertical-offset="666" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/GroupReturn.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="17" selection-start="512" selection-end="512" vertical-scroll-proportion="0.59504133" vertical-offset="54" max-vertical-offset="576" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_01_28_065015_create_group_application_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="47" selection-start="511" selection-end="511" vertical-scroll-proportion="-6.6666665" vertical-offset="162" max-vertical-offset="792" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/list.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="685" selection-end="685" vertical-scroll-proportion="0.6840855" vertical-offset="0" max-vertical-offset="540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/info.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="6" selection-start="1562" selection-end="1843" vertical-scroll-proportion="-21.333334" vertical-offset="0" max-vertical-offset="684" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groupapp/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="38" selection-start="2596" selection-end="2812" vertical-scroll-proportion="-9.185185" vertical-offset="814" max-vertical-offset="1260" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/group/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="3816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/group/addmember.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="0" selection-end="216" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="1224" />
+        <state line="3" column="34" selection-start="84" selection-end="84" vertical-scroll-proportion="-0.0" vertical-offset="54" max-vertical-offset="990" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/groupapp/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="33" selection-start="1188" selection-end="1209" vertical-scroll-proportion="-19.333334" vertical-offset="54" max-vertical-offset="1152">
-          <folding />
-        </state>
+        <state line="3" column="30" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1152" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/add.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_12_093957_create_income_parameter_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="188" selection-start="5720" selection-end="5886" vertical-scroll-proportion="2.146154" vertical-offset="648" max-vertical-offset="2646">
-          <folding />
-        </state>
+        <state line="18" column="34" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="720" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/GroupController.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_08_024354_create_qualitative_questions_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="57" selection-start="873" selection-end="873" vertical-scroll-proportion="-5.259259" vertical-offset="704" max-vertical-offset="3708">
-          <folding />
-        </state>
+        <state line="19" column="37" selection-start="463" selection-end="463" vertical-scroll-proportion="-3.2222223" vertical-offset="237" max-vertical-offset="720" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Groups.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_08_023943_create_balance_sheet_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="40" selection-start="701" selection-end="709" vertical-scroll-proportion="-11.333333" vertical-offset="144" max-vertical-offset="684">
-          <folding />
-        </state>
+        <state line="20" column="35" selection-start="484" selection-end="484" vertical-scroll-proportion="-2.6666667" vertical-offset="270" max-vertical-offset="738" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicantController.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_12_094203_create_cash_flow_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="62" selection-start="4435" selection-end="4435" vertical-scroll-proportion="-15.259259" vertical-offset="1910" max-vertical-offset="2502">
-          <folding />
-        </state>
+        <state line="32" column="35" selection-start="908" selection-end="908" vertical-scroll-proportion="-0.8165138" vertical-offset="736" max-vertical-offset="954" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Applicants.php">
+    <entry file="file://$PROJECT_DIR$/app/views/groupapp/member_table.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="227" selection-end="238" vertical-scroll-proportion="-4.0740743" vertical-offset="124" max-vertical-offset="954">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/manage.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="46" selection-start="13106" selection-end="13213" vertical-scroll-proportion="-4.0" vertical-offset="3996" max-vertical-offset="4698">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/applicant/saving_trans.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="21" selection-start="687" selection-end="696" vertical-scroll-proportion="0.945591" vertical-offset="0" max-vertical-offset="702">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/group/members.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="54" selection-start="2976" selection-end="2976" vertical-scroll-proportion="1.3461539" vertical-offset="596" max-vertical-offset="1494">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/group/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="31" selection-start="743" selection-end="743" vertical-scroll-proportion="-14.0" vertical-offset="108" max-vertical-offset="666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/group/listmembers.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="16" selection-start="0" selection-end="5569" vertical-scroll-proportion="-28.0" vertical-offset="0" max-vertical-offset="2142">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groupapp/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="117" selection-start="1057" selection-end="1057" vertical-scroll-proportion="-7.3333335" vertical-offset="108" max-vertical-offset="1008">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groupapp/proccess.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="23" selection-start="395" selection-end="395" vertical-scroll-proportion="7.9259257" vertical-offset="412" max-vertical-offset="1404">
+        <state line="14" column="93" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="1422">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/groupapp/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="25" selection-start="110" selection-end="110" vertical-scroll-proportion="8.666667" vertical-offset="324" max-vertical-offset="1566">
+        <state line="44" column="58" selection-start="1514" selection-end="1514" vertical-scroll-proportion="0.47368422" vertical-offset="612" max-vertical-offset="1530" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groupapp/payment_table.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="13" selection-start="0" selection-end="2669" vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="1332">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groupapp/list.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/login.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="70" selection-start="2831" selection-end="2831" vertical-scroll-proportion="-28.666666" vertical-offset="162" max-vertical-offset="1170">
+        <state line="69" column="51" selection-start="3683" selection-end="3683" vertical-scroll-proportion="-8.740741" vertical-offset="1006" max-vertical-offset="1476" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/testmenu.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="73" selection-start="3014" selection-end="3014" vertical-scroll-proportion="-8.740741" vertical-offset="430" max-vertical-offset="954" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/GrantedLoans.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cash_flow/edit_parameter.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="84" selection-start="537" selection-end="537" vertical-scroll-proportion="-6.6666665" vertical-offset="0" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groupapp/info.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_12_093938_create_cash_parameter_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1350" selection-end="1350" vertical-scroll-proportion="-15.259259" vertical-offset="74" max-vertical-offset="594">
+        <state line="19" column="37" selection-start="431" selection-end="431" vertical-scroll-proportion="0.30905512" vertical-offset="167" max-vertical-offset="720" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/CashParameterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="23" selection-start="1897" selection-end="1897" vertical-scroll-proportion="-14.407408" vertical-offset="1159" max-vertical-offset="1710" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CashParameter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="39" selection-start="283" selection-end="283" vertical-scroll-proportion="0.7346939" vertical-offset="0" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cash_flow/list_parameters.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="54" selection-start="157" selection-end="183" vertical-scroll-proportion="-2.6666667" vertical-offset="72" max-vertical-offset="1188">
           <folding>
-            <element signature="n#style#0;n#b#0;n#!!top" expanded="true" />
+            <element signature="e#6#87#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="20" selection-start="885" selection-end="885" vertical-scroll-proportion="0.7672131" vertical-offset="270" max-vertical-offset="2340" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/CashFlow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="46" selection-start="395" selection-end="395" vertical-scroll-proportion="-12.666667" vertical-offset="0" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cash_flow/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="370">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/manage.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="253" column="9" selection-start="13062" selection-end="14590" vertical-scroll-proportion="0.7090909" vertical-offset="3681" max-vertical-offset="4176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/bussness/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="187" selection-start="2341" selection-end="2486" vertical-scroll-proportion="-10.666667" vertical-offset="540" max-vertical-offset="1944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cash_flow/add_parameter.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="2" selection-start="332" selection-end="400" vertical-scroll-proportion="-0.6666667" vertical-offset="126" max-vertical-offset="864">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cash_flow/parameter_index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="28" selection-start="124" selection-end="124" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parameters/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="32" selection-start="128" selection-end="128" vertical-scroll-proportion="-2.6666667" vertical-offset="0" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parameters/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="79" selection-start="670" selection-end="670" vertical-scroll-proportion="0.074074075" vertical-offset="182" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parameters/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="32" selection-start="1123" selection-end="1123" vertical-scroll-proportion="1.073077" vertical-offset="0" max-vertical-offset="1098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ParameterController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="23" selection-start="1637" selection-end="1637" vertical-scroll-proportion="0.69606006" vertical-offset="1177" max-vertical-offset="1710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/parameters/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="6" selection-start="323" selection-end="707" vertical-scroll-proportion="0.36330274" vertical-offset="0" max-vertical-offset="864">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_12_093914_create_parameter_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="0.19461697" vertical-offset="104" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Parameters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="24" selection-start="155" selection-end="155" vertical-scroll-proportion="-6.0" vertical-offset="0" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ApplicantController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="2.0" vertical-offset="54" max-vertical-offset="2502">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/BalanceSheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="29" selection-start="344" selection-end="353" vertical-scroll-proportion="-12.0" vertical-offset="0" max-vertical-offset="504">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/balance_sheet/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="535">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cash_flow/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="46" selection-start="696" selection-end="696" vertical-scroll-proportion="0.14173229" vertical-offset="270" max-vertical-offset="882">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cash_flow/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="0" selection-end="73" vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="3276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/BalanceSheetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="5" selection-start="2075" selection-end="2291" vertical-scroll-proportion="-13.481482" vertical-offset="1472" max-vertical-offset="1980">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ae3d576a/daf720df-6d52-46ee-aba0-dcd5f1984b75/green..income_statement">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_03_08_024209_create_income_statement_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="43" selection-start="931" selection-end="931" vertical-scroll-proportion="0.5305677" vertical-offset="261" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cash_flow/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="42" selection-start="6505" selection-end="6505" vertical-scroll-proportion="0.4909091" vertical-offset="639" max-vertical-offset="1170">
+          <folding>
+            <element signature="tag#div#1" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/balance_sheet/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="6" selection-start="7163" selection-end="7163" vertical-scroll-proportion="0.7923077" vertical-offset="2216" max-vertical-offset="2736">
+          <folding>
+            <element signature="n#style#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#4;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#5;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#7;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#9;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#10;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#12;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#13;n#table#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/balance_sheet/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="42" selection-start="3798" selection-end="3798" vertical-scroll-proportion="0.44615385" vertical-offset="1442" max-vertical-offset="1962">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/balance_sheet/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="0.92477065" vertical-offset="0" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/CashFlowController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="36" selection-start="2072" selection-end="2072" vertical-scroll-proportion="0.38709676" vertical-offset="972" max-vertical-offset="2232">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Applicants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="46" selection-start="1236" selection-end="1236" vertical-scroll-proportion="0.7236842" vertical-offset="570" max-vertical-offset="1098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/IncomeStatement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="21" selection-start="13" selection-end="28" vertical-scroll-proportion="0.078947365" vertical-offset="0" max-vertical-offset="456">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="292" column="36" selection-start="10579" selection-end="10579" vertical-scroll-proportion="21.25926" vertical-offset="5830" max-vertical-offset="6642">
+        <state line="460" column="79" selection-start="17311" selection-end="17311" vertical-scroll-proportion="-16.407408" vertical-offset="7837" max-vertical-offset="8388">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groupapp/grant.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/views/applicant/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="79" selection-start="2864" selection-end="2881" vertical-scroll-proportion="-7.5925927" vertical-offset="623" max-vertical-offset="2466">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/GroupAppController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="72" selection-start="2739" selection-end="2739" vertical-scroll-proportion="0.2480315" vertical-offset="1890" max-vertical-offset="2574">
+        <state line="19" column="54" selection-start="793" selection-end="793" vertical-scroll-proportion="0.40632054" vertical-offset="162" max-vertical-offset="2736">
           <folding />
         </state>
       </provider>

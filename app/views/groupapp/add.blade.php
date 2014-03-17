@@ -10,7 +10,7 @@ foreach($group->memberes as $gmember){
 @if($group->applications()->where("status","pending")->get()->count() != 0)
 <h2 class="text-info"><i class="fa fa-exclamation"></i> Info</h2>
 <h4>You can not add application for this Group, it have already applied for a loan, The Application may either be processed or the group has an unpaid Loan</h4>
-@elseif($group->applications()->where("status","pending")->get()->count() != 0)
+@elseif($group->applications()->where("status","granted")->get()->count() != 0)
 <h2 class="text-info"><i class="fa fa-exclamation"></i> Info</h2>
 <h4>You can not add application for this Group, it has not yet finished to pay current loan</h4>
 @elseif($group->memberes()->count() == 0)

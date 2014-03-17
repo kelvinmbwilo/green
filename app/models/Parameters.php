@@ -11,4 +11,8 @@ class Parameters extends Eloquent {
 
     protected  $guarded = array('id');
 
+    public function balance(){
+        return $this->hasMany('BalanceSheet', 'parameter_id', 'id');
+    }
+
 }

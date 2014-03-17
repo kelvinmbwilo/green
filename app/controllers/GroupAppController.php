@@ -135,4 +135,63 @@ class GroupAppController extends \BaseController {
         return $grant;
     }
 
+    public function processreturnform($id){
+        $applicat = GroupApplication::find($id);
+        $returns = $applicat->returns()->orderBy("created_at","desc");
+        $balance = 0;
+        $remain = 0;
+        $mremain = 0;
+        if($returns->count() == 0){
+            $balance = $applicat->granted->amount_to_return - Input::get("return");
+        }else{
+            $remain = $applicat->granted->amount_per_return - Input::get("return");
+            $balance = $returns->first()->balance - Input::get("return");
+        }
+        GroupReturn::create(array(
+            "group_id"    => $applicat->group->id,
+            "application_id"  => $id,
+            "granted_id"      => $applicat->granted->id,
+            "amount"          => Input::get("return"),
+            "return_date"     => Input::get("returndate"),
+            "balance"         => $balance,
+            "remaining"       => $remain,
+            "user_id"         => Auth::user()->id
+        ));
+        foreach($applicat->group->memberes as $member){
+            $mreturns = $applicat->member_returns()->orderBy("created_at","desc");
+
+            if($mreturns->count() == 0){
+                $mbalance = ($applicat->granted->amount_to_return/$applicat->group->memberes()->count()) - Input::get("returns".$member->applicant->id);
+            }else{
+                $mremain = ($applicat->granted->amount_per_return/$applicat->group->memberes()->count()) - Input::get("returns".$member->applicant->id);
+                $mbalance = $mreturns->first()->balance - Input::get("returns".$member->applicant->id);
+            }
+            MemberReturn::create(array(
+                "applicant_id"    => $member->applicant->id,
+                "application_id"  => $id,
+                "granted_id"      => $applicat->granted->id,
+                "amount"          => Input::get("returns".$member->applicant->id),
+                "return_date"     => Input::get("returndate"),
+                "balance"         => $mbalance,
+                "remaining"       => $mremain,
+                "user_id"         => Auth::user()->id
+            ));
+
+            $sav = $member->applicant->savings;
+            $sav->amount = $sav->amount + Input::get("savings".$member->applicant->id);
+
+            SavingsTrans::create(array(
+                "applicant_id"  => $member->applicant->id,
+                "saving_id"     =>$sav->id,
+                "amount"        =>Input::get("savings".$member->applicant->id),
+                "action"        =>"add",
+                "date"          =>date("Y-m-d"),
+                "balance_before"=>$sav->amount,
+                "balance_after" =>$sav->amount + Input::get("savings".$member->applicant->id)
+            ));
+            $sav->save();
+        }
+
+    }
+
 }

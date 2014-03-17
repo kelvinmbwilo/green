@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('breadcumbs')
-<li><a href="#">Home</a></li>
+<li><a href="{{ url('home') }}">Home</a></li>
 <li><a href="{{ url("groups") }}">groups</a></li>
 <li ><a href="{{ url("groups/{$group->id}") }}">{{ $group->name }}</a></li>
 <li class="active">Loan Application</li>

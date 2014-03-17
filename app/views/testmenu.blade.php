@@ -27,22 +27,17 @@
                     <a href="#"><i class="fa fa-bar-chart-o fa-2x"></i> <span>Reports</span> <i class="fa fa-chevron-down pull-right"></i></a>
                     <ul>
                         <li><a href="#"><i class='fa fa-building-o'></i> Generate Report <i class="fa fa-chevron-right pull-right"></i></a></li>
-                            <li><a href="#"><i class='fa fa-bars'></i> View Report <i class="fa fa-chevron-right pull-right"></i></a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i> Manage <i class="fa fa-chevron-right pull-right"></i></a> </li>
-                    </ul>
-            </li>
-             <li class="submenu">
-                    <a href="#"><i class="fa fa-briefcase fa-2x"></i> <span>Applications</span> <i class="fa fa-chevron-down pull-right"></i></a>
-                    <ul>
-                            <li><a href="#"><i class="fa fa-cog"></i> Manage <i class="fa fa-chevron-right pull-right"></i></a> </li>
-                           <li><a href="#"><i class='fa fa-building-o'></i> History  <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="#"><i class='fa fa-bars'></i> View Report <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i> Manage <i class="fa fa-chevron-right pull-right"></i></a> </li>
                     </ul>
             </li>
             <li class="submenu">
                     <a href="#"><i class="fa fa-cog fa-2x"></i> <span>Settings</span> <i class="fa fa-chevron-down pull-right"></i></a>
                     <ul>
                         <li><a href="{{ url("loans") }}"><i class='fa fa-plus'></i> Loans <i class="fa fa-chevron-right pull-right"></i></a></li>
-                        <li><a href="{{ url("settings/parameters") }}"><i class="fa fa-cog"></i> Bussiness <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="{{ url("settings/cashflow/parameters") }}"><i class="fa fa-cog"></i> Cash Flow <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="{{ url("settings/parameters") }}"><i class="fa fa-cog"></i> Balance Sheet <i class="fa fa-chevron-right pull-right"></i></a></li>
+                        <li><a href="{{ url("settings/parameters") }}"><i class="fa fa-cog"></i> Qualitative Questions <i class="fa fa-chevron-right pull-right"></i></a></li>
                         <li><a href="#"><i class="fa fa-cog"></i> Data Backup <i class="fa fa-chevron-right pull-right"></i></a></li>
                         <li><a href="{{ url("rules") }}"><i class="fa fa-cog"></i> Rules <i class="fa fa-chevron-right pull-right"></i></a></li>
                     </ul>
