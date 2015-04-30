@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Green Financial Solutions</title>
+        <title>Dotphics Microfinance App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {{ HTML::style("bootstrap/css/bootstrap.css") }}
         {{ HTML::style("bootstrap/css/bootstrap-theme.css") }}
@@ -22,7 +22,7 @@ and open the template in the editor.
             <div class="container" style="padding-top: 160px">
                 <div class="panel panel-success col-sm-offset-3" style="width: 50%;">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-muted"><b> MICROFINANCE APP<span class="pull-right">Login</span></b></h3>
+                        <h3 class="panel-title text-muted" style="font-family: ubuntu"><b> Dotphics Microfinance App<span class="pull-right">Login</span></b></h3>
                     </div>
                     <div class="panel-body">
                         @if(isset($error))

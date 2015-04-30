@@ -1,6 +1,6 @@
 
 	  <div id="mainBody">
-			<h1>Green Financial Solutions (T) LTD
+			<h1 style="font-family: ubuntu">Dotphics Microfinance App
 				<div class="pull-right">
 				<a class="btn btn-large tip-bottom" title="Manage Files"><i class="fa fa-comments"></i></a>
 				<a class="btn btn-large" title="" href="#"><i class="fa fa-user"></i> <span>Profile</span></a>
