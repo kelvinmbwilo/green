@@ -4,12 +4,12 @@ $amount_per = "";
 $profit = "";
 $dur ="";
 foreach(Loans::all() as $loan){
-    if(in_array($applicat->applied_amount,range($loan->minimum_amount,$loan->maximum_amount))){
+    if($applicat->applied_amount>=$loan->minimum_amount && $applicat->applied_amount<=$loan->maximum_amount){
         $profit = $loan->profit;
         $amount_to = $applicat->applied_amount +($applicat->applied_amount *($profit/100));
         $amount_per = $amount_to /($loan->MaxReturnTime*4);
         $dur = $loan->MaxReturnTime-1;
-    }
+   }
 }
 ?>
 

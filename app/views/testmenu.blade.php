@@ -1,5 +1,5 @@
 <div id="sidebar"> 
-    <h2 id="logo" ><a href="index.php">{{ HTML::image('img/logo.jpg','',array('class'=>'img-responsive img-rounded', 'style'=>'height:160px;width:90%')) }}</a></h2>  
+    <h2 id="logo" ><a href="index.php">{{ HTML::image('img/Logo.png','',array('class'=>'img-responsive img-rounded', 'style'=>'height:140px;width:90%')) }}</a></h2>  
     <ul>
             <li class="active"><a href="{{url('home')}}"><i class="fa fa-home fa-2x"></i> <span>Dashboard</span></a></li>
             <li class="submenu">

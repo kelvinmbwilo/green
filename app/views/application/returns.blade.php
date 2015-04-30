@@ -1,6 +1,6 @@
 <div>
     @if($applicat->returns()->count() == 0 )
-    <?
+    <?php
     $dat = date('Y-m-d');
     $amount = $applicat->granted->amount_per_return;
     ?>
